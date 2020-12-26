@@ -8,7 +8,7 @@ class Team2 extends Component
         this.state = {
             playerNames: [],
             amountPlayers: 0,
-            team2Skills: 5,
+            playerSkills: 5,
         };
     }
 

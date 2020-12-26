@@ -10,23 +10,42 @@ class Settings extends Component
     this.state = {
         // playerNames: [],
         // amountPlayers: 0,
-        team1Name: 'Team Uno',
-        team2Name: 'Team Dos',
+        team1Name: props.team1Name,
+        team2Name: props.team2Name,
         // team1Kit: 'purple',
         // team2Kit: 'green',
         // team1Skills: 5,
         // team2Skills: 5,
-        info: false,
+        info: props.info,
+    };
+
+    this.handleChangeTeam1 = this.handleChangeTeam1.bind(this);
+    this.handleChangeTeam2 = this.handleChangeTeam2.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    
     }
-}
+
+    handleChangeTeam1 (e) {
+        this.setState({ team1Name: e.currentTarget.value });
+    }
+
+
+    handleChangeTeam2(e) {
+        this.setState({ team2Name: e.currentTarget.value });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.settingsCompleted({ ...this.state });
+    }
 
     render() {
-
+        const { team1Name, team2Name } = this.state;
+        
         return (
-            <div class="mb-3">
-                <form
-                    onSubmit={ this.handleSubmit }>
-
+            <form
+                onSubmit={ this.handleSubmit }>
+                <div className="team1 col-md-6 mt-4">
                     <label
                         for="team1"
                         className="form-label">Team 1 Name</label>
@@ -35,12 +54,14 @@ class Settings extends Component
                         className="form-control"
                         id="team1"
                         onChange={ this.handleChangeTeam1 }
-                        // value={ team1Name }
-                        >
-                    </input>
+                        value={ team1Name }>
+                        </input>
+                
+                    <h3>{ team1Name }</h3>
 
-                    <Team1 />
-
+                    {/* <Team1 /> */}
+                </div>
+                <div className="team2 col-md-6 mt-4">
                     <label
                         for="team2"
                         className="form-label">Team 2 Name</label>
@@ -49,19 +70,20 @@ class Settings extends Component
                         className="form-control"
                         id="team1"
                         onChange={ this.handleChangeTeam2 }
-                        // value={ team2Name }
-                        >
+                        value={ team2Name }>
                     </input>
+            
+                    <h3>{ team2Name }</h3>
 
-                    <Team2 />
+                    {/* <Team2 /> */}
+                    </div>
 
                     <button
                         type="submit"
                         class="btn btn-primary">
                             Start Game
                     </button>
-                </form>
-            </div>
+            </form>
         );
     }
 }

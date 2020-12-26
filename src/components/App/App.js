@@ -1,14 +1,17 @@
 import Header from '../Header/Header';
-import Settings from '../Settings/Settings';
+import Settings from '../Settings';
 
-const App = () => {
-  return (
+const App = ({ info }) => !info ? (
     <div>
         <Header />
         <Settings />
     </div>
+) : (
+    <div>
+        <Header />
 
-  );
-}
+    </div>
+);
+
 
 export default App;
