@@ -59,7 +59,6 @@ class Settings extends Component
                 
                     <h3>{ team1Name }</h3>
 
-                    {/* <Team1 /> */}
                 </div>
                 <div className="team2 col-md-6 mt-4">
                     <label
@@ -75,14 +74,19 @@ class Settings extends Component
             
                     <h3>{ team2Name }</h3>
 
-                    {/* <Team2 /> */}
                     </div>
 
                     <button
                         type="submit"
+                        className="btn btn-primary">
+                            Save Team Names
+                    </button>
+
+                    {/* <button
+                        type="submit"
                         class="btn btn-primary">
                             Start Game
-                    </button>
+                    </button> */}
             </form>
         );
     }
