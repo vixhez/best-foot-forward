@@ -3,6 +3,7 @@ const settingsReducer = (state, action) => ({
   info: true,
   team1Name: action.data.team1Name,
   team2Name: action.data.team2Name,
+  amountPlayers: action.data.amountPlayers,
 });
 
 const reducer = (state, action) => {
