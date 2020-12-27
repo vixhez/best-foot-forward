@@ -1,6 +1,4 @@
 import { Component } from 'react';
-import Team1 from '../Team1/Team1';
-import Team2 from '../Team2/Team2';
 
 class Settings extends Component
 {
@@ -17,12 +15,18 @@ class Settings extends Component
         // team1Skills: 5,
         // team2Skills: 5,
         info: props.info,
+        amountPlayers: props.amountPlayers,
     };
 
+    this.handleChangePlayers = this.handleChangePlayers.bind(this);
     this.handleChangeTeam1 = this.handleChangeTeam1.bind(this);
     this.handleChangeTeam2 = this.handleChangeTeam2.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     
+    }
+
+    handleChangePlayers (e) {
+        this.setState({ amountPlayers: +e.currentTarget.value });
     }
 
     handleChangeTeam1 (e) {
@@ -40,14 +44,28 @@ class Settings extends Component
     }
 
     render() {
-        const { team1Name, team2Name } = this.state;
+        const { team1Name, team2Name, amountPlayers } = this.state;
         
         return (
             <form
                 onSubmit={ this.handleSubmit }>
+
+                <label htmlFor="players">How many on each team? (3-11)</label>
+                <input
+                    type="number"
+                    id="players"
+                    name="players"
+                    min="3"
+                    max="11"
+                    onChange={ this.handleChangePlayers }
+                    // value={ amountPlayers }
+                />     
+
+
+                
                 <div className="team1 col-md-6 mt-4">
                     <label
-                        for="team1"
+                        htmlFor="team1"
                         className="form-label">Team 1 Name</label>
                     <input
                         type="text"
@@ -62,7 +80,7 @@ class Settings extends Component
                 </div>
                 <div className="team2 col-md-6 mt-4">
                     <label
-                        for="team2"
+                        htmlFor="team2"
                         className="form-label">Team 2 Name</label>
                     <input
                         type="text"
