@@ -7,9 +7,7 @@ class PlayerForm extends Component
 
         this.state = {
             players: props.players,
-            // playerName: props.playerName,
-            // // playerNames: props.playerNames,
-            // playerSkills: props.playerSkills,
+            playerComplete: props.playerComplete,
         };
 
         this.handleChangePlayerName = this.handleChangePlayerName.bind(this);
@@ -40,13 +38,14 @@ class PlayerForm extends Component
 
     handleSubmit(e) {
         e.preventDefault();
+        this.setState({ playerComplete: true });
         this.props.playerAdded({ ...this.state });
     }
 
     render() {
-        const { players, playerName, playerSkills } = this.state;
+        const { players, playerComplete } = this.state;
 
-        return (
+        return !playerComplete ? (
             <div
                 id={ this.props.id }>
                 <form
@@ -83,6 +82,8 @@ class PlayerForm extends Component
                     </button>
                 </form>
             </div>
+        ) : (
+            <p>Added!</p>
         );
     }
 }
