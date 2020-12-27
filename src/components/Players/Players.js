@@ -18,14 +18,14 @@ class Players extends Component
                 const playerDetailsList = [];
 
                 for (let i = 1; i <= (amountPlayers * 2); i++) {
-                    playerDetailsList.push(<PlayerForm />)
+                    playerDetailsList.push(<PlayerForm key={i} id={i}/>)
                 }
                 return playerDetailsList;
             };
 
             return (
             <ul>
-                { playerDetailsEntry() }
+                <li>{ playerDetailsEntry() }</li>
             </ul>
             )
 

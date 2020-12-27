@@ -6,41 +6,57 @@ class PlayerForm extends Component
         super(props);
 
         this.state = {
+            playerName: props.playerName,
             playerNames: props.playerNames,
             amountPlayers: props.amountPlayers,
-            // playerSkills: 5,
+            playerSkills: props.playerSkills,
         };
+
+        this.handleChangePlayerName = this.handleChangePlayerName.bind(this);
+        this.handleChangePlayerSkills = this.handleChangePlayerSkills.bind(this);
     }
 
-        render() {
-            const { playerNames, amountPlayers } = this.state;
+    handleChangePlayerName(e) {
+        console.log('oi oi');
+    }
 
-            return (
-                <div>
-                <label
-                for="playerName"
-                className="form-label">Player Name</label>
-                <input
-                    type="text"
-                    className="form-control"
-                    id="playerName"
-                    onChange={ this.handleChangePlayerName }
-                    // value={ playerName }
-                    >
-                </input>
-        
-                <label
-                    for="playerSkills">
-                Skill Level
-                </label>
-                <input
-                    type="range"
-                    min="0"
-                    max="10"
-                    value="5"
-                    id="playerSkills"
-                    onChange={ this.handleChangePlayerSkills }>    
-                </input>
+    handleChangePlayerSkills(e) {
+        console.log('savaloy');
+    }
+
+    render() {
+        const { playerNames, amountPlayers } = this.state;
+
+        return (
+            <div
+                id={ this.props.id }>
+                <form>
+                    <label
+                        htmlFor="playerName"
+                        className="form-label">Player Name</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id={ this.props.id }
+                        onChange={ this.handleChangePlayerName }
+                        // value={ playerName }
+                        >
+                    </input>
+            
+                    <label
+                        htmlFor="playerSkills">
+                    Skill Level
+                    </label>
+                    <input
+                        type="range"
+                        min="0"
+                        max="10"
+                        value="5"
+                        id={ this.props.id }
+                        onChange={ this.handleChangePlayerSkills }>    
+                    </input>
+
+                </form>
             </div>
         );
     }

@@ -1,4 +1,5 @@
 const initial = {
+    playerName: "",
     playerNames: [],
     amountPlayers: 0,
     team1Name: 'Team Uno',
