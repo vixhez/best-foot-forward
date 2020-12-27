@@ -2,11 +2,10 @@ import { connect } from 'react-redux';
 import Players from './Players';
 import { playerDetailsCompleted } from '../../data/actions';
 
-const mapStateToProps = ({ playerName, playerNames, amountPlayers, playerSkills }) => ({
-        playerName,
-        playerNames,
+const mapStateToProps = ({ players, amountPlayers }) => ({
+        players,
         amountPlayers,
-        playerSkills,
+
 });
 
 const mapDispatchToProps = dispatch => {

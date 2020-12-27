@@ -1,8 +1,7 @@
 const ResetButton = ({ playersReset }) => (
     <button
         onClick={ playersReset }
-        type="submit"
-        className="btn btn-primary">
+        className="btn btn-danger">
         Reset Players
     </button>
 );

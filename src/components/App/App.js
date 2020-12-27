@@ -1,7 +1,6 @@
 import Header from '../Header/Header';
 import Settings from '../Settings';
 import Players from '../Players';
-import PlayerForm from '../PlayerForm'
 import ResetButton from '../ResetButton';
 // import StartGameButton from '../StartGameButton';
 

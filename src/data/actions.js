@@ -17,3 +17,10 @@ export const playersReset = () => {
         type: "PLAYERS_RESET",
     }
 }
+
+export const playerAdded = (data) => {
+    return {
+        type: "PLAYER_ADDED",
+        data: data,
+    }
+}

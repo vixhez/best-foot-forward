@@ -6,30 +6,51 @@ class PlayerForm extends Component
         super(props);
 
         this.state = {
-            playerName: props.playerName,
-            // playerNames: props.playerNames,
-            playerSkills: props.playerSkills,
+            players: props.players,
+            // playerName: props.playerName,
+            // // playerNames: props.playerNames,
+            // playerSkills: props.playerSkills,
         };
 
         this.handleChangePlayerName = this.handleChangePlayerName.bind(this);
         this.handleChangePlayerSkills = this.handleChangePlayerSkills.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChangePlayerName(e) {
-        this.setState({ playerName: e.currentTarget.value });
+        const enteredName = e.currentTarget.value;
+        this.setState({
+            players: {
+                ...this.state.players,
+                playerName: enteredName,
+            }
+        });
     }
 
     handleChangePlayerSkills(e) {
-        this.setState({ playerSkills: +e.currentTarget.value });
+        const enteredSkills = +e.currentTarget.value;
+        this.setState({
+            players: {
+                ...this.state.players,
+                playerSkills: enteredSkills
+            }
+        });
+        console.log(this.state.players);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        this.props.playerAdded({ ...this.state });
     }
 
     render() {
-        const { playerName, playerNames, playerSkills } = this.state;
+        const { players, playerName, playerSkills } = this.state;
 
         return (
             <div
                 id={ this.props.id }>
-                <form>
+                <form
+                    onSubmit={ this.handleSubmit }>
                     <label
                         htmlFor="playerName"
                         className="form-label">Player Name</label>
@@ -38,7 +59,7 @@ class PlayerForm extends Component
                         className="form-control"
                         id={ this.props.id }
                         onChange={ this.handleChangePlayerName }
-                        value={ playerName }
+                        value={ players.playerName }
                         >
                     </input>
             
@@ -50,11 +71,16 @@ class PlayerForm extends Component
                         type="range"
                         min="0"
                         max="10"
-                        value={ +playerSkills }
+                        value={ +players.playerSkills }
                         id={ this.props.id }
                         onChange={ this.handleChangePlayerSkills }>    
                     </input>
 
+                    <button
+                        type="submit"
+                        className="btn btn-primary">
+                    Confirm Player
+                    </button>
                 </form>
             </div>
         );

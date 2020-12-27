@@ -1,6 +1,4 @@
 import { Component } from 'react';
-import Team1 from '../Team1/Team1';
-import Team2 from '../Team2/Team2';
 
 class Settings extends Component
 {

@@ -8,16 +8,26 @@ const settingsReducer = (state, action) => ({
   amountPlayers: action.data.amountPlayers,
 });
 
-const playerDetailsReducer = (state, action) => ({
+// const playerDetailsReducer = (state, action) => ({
+//     ...state,
+//     playerNames: action.data.playerNames,
+// });
+
+const playerAddedReducer = (state, action) => ({
     ...state,
-    playerNames: action.data.playerNames,
-});
+    players: {
+        playerName: action.data.players.playerName,
+        playerSkills: action.data.players.playerSkills,
+    },
+    playersArray: (state.playersArray.concat(action.data.players)),
+})
+
 
 const reducer = (state, action) => {
     switch (action.type) {
         case "SETTINGS_COMPLETED": return settingsReducer(state, action);
         
-        case "PLAYER_DETAILS_COMPLETED": return playerDetailsReducer(state, action);
+        // case "PLAYER_DETAILS_COMPLETED": return playerDetailsReducer(state, action);
 
         case "PLAYERS_RESET": return {
             ...initial,
@@ -26,6 +36,8 @@ const reducer = (state, action) => {
             // amountPlayers: state.amountPlayers,
             // info: true,
         }
+
+        case "PLAYER_ADDED": return playerAddedReducer(state, action);
 
         default: return state;
     }
