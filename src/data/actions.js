@@ -4,3 +4,10 @@ export const settingsCompleted = (data) => {
         data: data,
     }
 }
+
+export const playerDetailsCompleted = (data) => {
+    return {
+        type: "PLAYER_DETAILS_COMPLETED",
+        data: data,
+    }
+}

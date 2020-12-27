@@ -6,11 +6,18 @@ const settingsReducer = (state, action) => ({
   amountPlayers: action.data.amountPlayers,
 });
 
+const playerDetailsReducer = (state, action) => ({
+    ...state,
+    playerNames: action.data.playerNames,
+});
+
 const reducer = (state, action) => {
     switch (action.type) {
-      case "SETTINGS_COMPLETED": return settingsReducer(state, action);
+        case "SETTINGS_COMPLETED": return settingsReducer(state, action);
+        
+        case "PLAYER_DETAILS_COMPLETED": return playerDetailsReducer(state, action);
 
-      default: return state;
+        default: return state;
     }
   
   };

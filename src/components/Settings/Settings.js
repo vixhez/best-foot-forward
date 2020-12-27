@@ -52,7 +52,7 @@ class Settings extends Component
             <form
                 onSubmit={ this.handleSubmit }>
 
-                <label for="players">How many on each team? (3-11)</label>
+                <label htmlFor="players">How many on each team? (3-11)</label>
                 <input
                     type="number"
                     id="players"
@@ -67,7 +67,7 @@ class Settings extends Component
                 
                 <div className="team1 col-md-6 mt-4">
                     <label
-                        for="team1"
+                        htmlFor="team1"
                         className="form-label">Team 1 Name</label>
                     <input
                         type="text"
@@ -82,7 +82,7 @@ class Settings extends Component
                 </div>
                 <div className="team2 col-md-6 mt-4">
                     <label
-                        for="team2"
+                        htmlFor="team2"
                         className="form-label">Team 2 Name</label>
                     <input
                         type="text"
