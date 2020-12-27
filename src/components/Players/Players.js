@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import PlayerForm from './PlayerForm';
+import PlayerForm from '../PlayerForm';
 
 class Players extends Component
 {
@@ -11,27 +11,43 @@ class Players extends Component
         };
     }
 
-        render() {
-            const { amountPlayers } = this.state;
+    render() {
+        const { amountPlayers } = this.state;
 
-            const playerDetailsEntry = () => {
-                const playerDetailsList = [];
+        const playerDetailsEntry = () => {
+            const playerDetailsList = [];
 
-                for (let i = 1; i <= (amountPlayers * 2); i++) {
-                    playerDetailsList.push(<PlayerForm key={i} id={i}/>)
-                }
-                return playerDetailsList;
-            };
+        for (let i = 1; i <= (amountPlayers * 2); i++) {
+            playerDetailsList.push(<PlayerForm key={i} id={i}/>)
+            }
+            return playerDetailsList;
+        };
 
-            return (
-            <ul>
-                <li>{ playerDetailsEntry() }</li>
-            </ul>
-            )
+        return (
+        <>
+        <ul>
+            <li>{ playerDetailsEntry() }</li>
+        </ul>
+
+        <button
+            type="submit"
+            className="btn btn-primary">
+        Ready?
+        </button>
+
+        <button
+            type="submit"
+            className="btn btn-primary">
+        Reset Players
+        </button>
+</>
+
+        
+        )
 
 
 
-    }
+}
 };
 
 export default Players;

@@ -6,6 +6,7 @@ const initial = {
     team2Name: 'Team Dos',
     team1Kit: 'purple',
     team2Kit: 'green',
+    playerSkills: 5,
     team1Skills: 5,
     team2Skills: 5,
     info: false,

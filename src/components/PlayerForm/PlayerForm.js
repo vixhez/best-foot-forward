@@ -7,8 +7,7 @@ class PlayerForm extends Component
 
         this.state = {
             playerName: props.playerName,
-            playerNames: props.playerNames,
-            amountPlayers: props.amountPlayers,
+            // playerNames: props.playerNames,
             playerSkills: props.playerSkills,
         };
 
@@ -17,15 +16,15 @@ class PlayerForm extends Component
     }
 
     handleChangePlayerName(e) {
-        console.log('oi oi');
+        this.setState({ playerName: e.currentTarget.value });
     }
 
     handleChangePlayerSkills(e) {
-        console.log('savaloy');
+        this.setState({ playerSkills: +e.currentTarget.value });
     }
 
     render() {
-        const { playerNames, amountPlayers } = this.state;
+        const { playerName, playerNames, playerSkills } = this.state;
 
         return (
             <div
@@ -39,7 +38,7 @@ class PlayerForm extends Component
                         className="form-control"
                         id={ this.props.id }
                         onChange={ this.handleChangePlayerName }
-                        // value={ playerName }
+                        value={ playerName }
                         >
                     </input>
             
@@ -51,7 +50,7 @@ class PlayerForm extends Component
                         type="range"
                         min="0"
                         max="10"
-                        value="5"
+                        value={ +playerSkills }
                         id={ this.props.id }
                         onChange={ this.handleChangePlayerSkills }>    
                     </input>
