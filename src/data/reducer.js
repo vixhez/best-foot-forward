@@ -1,3 +1,5 @@
+import initial from "./initial";
+
 const settingsReducer = (state, action) => ({
   ...state,
   info: true,
@@ -16,6 +18,14 @@ const reducer = (state, action) => {
         case "SETTINGS_COMPLETED": return settingsReducer(state, action);
         
         case "PLAYER_DETAILS_COMPLETED": return playerDetailsReducer(state, action);
+
+        case "PLAYERS_RESET": return {
+            ...initial,
+            // team1Name: state.team1Name,
+            // team2Name: state.team2Name,
+            // amountPlayers: state.amountPlayers,
+            // info: true,
+        }
 
         default: return state;
     }

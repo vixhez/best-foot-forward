@@ -35,11 +35,6 @@ class Players extends Component
         Ready?
         </button>
 
-        <button
-            type="submit"
-            className="btn btn-primary">
-        Reset Players
-        </button>
 </>
 
         

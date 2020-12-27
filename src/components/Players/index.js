@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
 import Players from './Players';
-import PlayerForm from '../PlayerForm';
 import { playerDetailsCompleted } from '../../data/actions';
 
 const mapStateToProps = ({ playerName, playerNames, amountPlayers, playerSkills }) => ({

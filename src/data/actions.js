@@ -11,3 +11,9 @@ export const playerDetailsCompleted = (data) => {
         data: data,
     }
 }
+
+export const playersReset = () => {
+    return {
+        type: "PLAYERS_RESET",
+    }
+}
