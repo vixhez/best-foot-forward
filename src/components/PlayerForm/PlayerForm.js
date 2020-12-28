@@ -84,7 +84,7 @@ class PlayerForm extends Component
                 </form>
             </div>
         ) : (
-            <p>Added!</p>
+            <p>{ players.playerName } added!</p>
         );
     }
 }
