@@ -20,7 +20,25 @@ const playerAddedReducer = (state, action) => ({
         playerSkills: action.data.players.playerSkills,
     },
     playersArray: (state.playersArray.concat(action.data.players)),
-})
+});
+
+const sortRandomReducer = (state) => {   
+    const teamSplit = (state.playersArray.length) / 2;
+
+    state.playersArray.sort(function(a, b) {
+        return 0.5 - Math.random();
+    });
+
+    const firstHalf = (state.playersArray.splice(0, teamSplit));
+    const secondHalf = state.playersArray;
+
+    return {
+        ...state,
+        team1: firstHalf,
+        team2: secondHalf,
+        teamsCreated: true,
+    }
+};
 
 
 const reducer = (state, action) => {
@@ -38,6 +56,10 @@ const reducer = (state, action) => {
         }
 
         case "PLAYER_ADDED": return playerAddedReducer(state, action);
+
+        case "SORT_RANDOMLY": return sortRandomReducer(state);
+
+        // case "SORT_BY_SKILLS": return sortBySkillsReducer(state);
 
         default: return state;
     }

@@ -58,7 +58,7 @@ class Settings extends Component
                     min="3"
                     max="11"
                     onChange={ this.handleChangePlayers }
-                    // value={ amountPlayers }
+                    value={ amountPlayers }
                 />     
 
 

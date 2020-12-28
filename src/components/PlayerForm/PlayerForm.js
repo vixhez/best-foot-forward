@@ -47,7 +47,8 @@ class PlayerForm extends Component
 
         return !playerComplete ? (
             <div
-                id={ this.props.id }>
+                id={ this.props.id }
+                className="team1 col-md-6 mt-4">
                 <form
                     onSubmit={ this.handleSubmit }>
                     <label
