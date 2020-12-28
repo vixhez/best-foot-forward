@@ -4,7 +4,7 @@ import Players from '../Players';
 import PlayerList from '../PlayerList';
 import ResetButton from '../ResetButton';
 import RandomSortButton from '../RandomSortButton';
-// import SkillSortButton from '../SkillSortButton';
+import SkillSortButton from '../SkillSortButton';
 import Match from '../Match';
 // import StartGameButton from '../StartGameButton';
 
