@@ -1,16 +1,19 @@
 const initial = {
     players: {
-        playerName: "",
+        playerName: '',
         playerSkills: 5,
     },
     playersArray: [],
-    amountPlayers: 0,
+    amountPlayers: 3,
     team1Name: 'Team Uno',
     team2Name: 'Team Dos',
-    team1Kit: 'purple',
-    team2Kit: 'green',
+    team1Kit: '',
+    team2Kit: '',
+    team1: '',
+    team2: '',
     info: false,
     playerComplete: false,
+    teamsCreated: false,
 }
 
 export default initial;

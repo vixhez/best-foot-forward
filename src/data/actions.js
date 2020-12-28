@@ -24,3 +24,15 @@ export const playerAdded = (data) => {
         data: data,
     }
 }
+
+export const sortRandomly = () => {
+    return {
+        type: "SORT_RANDOMLY",
+    }
+}
+
+export const sortBySkills = () => {
+    return {
+        type: "SORT_BY_SKILLS",
+    }
+}
