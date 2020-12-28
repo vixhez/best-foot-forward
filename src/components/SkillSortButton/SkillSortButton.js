@@ -1,9 +1,9 @@
-const SkillSortButton = () => {
+const SkillSortButton = ({ sortBySkills }) => (
     <button
-    type="submit"
+    onClick={ sortBySkills }
     class="btn btn-secondary">
         Sort Players By Skill
 </button>
-}
+);
 
 export default SkillSortButton;
