@@ -99,10 +99,9 @@ const reducer = (state, action) => {
 
         case "PLAYERS_RESET": return {
             ...initial,
-            // team1Name: state.team1Name,
-            // team2Name: state.team2Name,
-            // amountPlayers: state.amountPlayers,
-            // info: true,
+            team1Name: state.team1Name,
+            team2Name: state.team2Name,
+            amountPlayers: state.amountPlayers,
         }
 
         case "PLAYER_ADDED": return playerAddedReducer(state, action);
