@@ -10,6 +10,10 @@ const settingsReducer = (state, action) => ({
   team2Kit: action.data.team2Kit,
   team1Design: action.data.team1Design,
   team2Design: action.data.team2Design,
+  chosenDesignTeam1: action.data.chosenDesignTeam1,
+  chosenDesignTeam2: action.data.chosenDesignTeam2,
+  chosenKitTeam1: action.data.chosenKitTeam1,
+  chosenKitTeam2: action.data.chosenKitTeam2,
 });
 
 // const playerDetailsReducer = (state, action) => ({
