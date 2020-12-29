@@ -36,7 +36,6 @@ const sortRandomReducer = (state) => {
 
     const firstHalf = (justNames.splice(0, teamSplit));
     const secondHalf = justNames;
-    // need to access the array inside.. currently accessing the object. need to work out how to worm your way inside!
 
     return {
         ...state,
