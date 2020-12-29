@@ -6,6 +6,10 @@ const settingsReducer = (state, action) => ({
   team1Name: action.data.team1Name,
   team2Name: action.data.team2Name,
   amountPlayers: action.data.amountPlayers,
+  team1Kit: action.data.team1Kit,
+  team2Kit: action.data.team2Kit,
+  team1Design: action.data.team1Design,
+  team2Design: action.data.team2Design,
 });
 
 // const playerDetailsReducer = (state, action) => ({
