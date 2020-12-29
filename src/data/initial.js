@@ -9,6 +9,8 @@ const initial = {
     team2Name: 'Team Dos',
     team1Kit: '',
     team2Kit: '',
+    team1Design: '',
+    team2Design: '',
     team1: '',
     team2: '',
     info: false,
