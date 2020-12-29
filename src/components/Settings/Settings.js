@@ -25,10 +25,10 @@ class Settings extends Component {
             team2Kit: props.team2Kit,
             team1Design: props.team1Design,
             team2Design: props.team2Design,
-            chosenDesignTeam1: '',
-            chosenDesignTeam2: '',
-            chosenKitTeam1: '',
-            chosenKitTeam2: '',
+            chosenDesignTeam1: props.chosenDesignTeam1,
+            chosenDesignTeam2: props.chosenDesignTeam2,
+            chosenKitTeam1: props.chosenKitTeam1,
+            chosenKitTeam2: props.chosenKitTeam2,
         };
 
         this.handleChangePlayers = this.handleChangePlayers.bind(this);
@@ -56,6 +56,7 @@ class Settings extends Component {
 
     handleClickTeam1Kit(e) {
         e.preventDefault();
+        console.log(e.currentTarget);
         this.setState({
             team1Kit: e.currentTarget.className,
             chosenKitTeam1: e.currentTarget.firstElementChild.src,
