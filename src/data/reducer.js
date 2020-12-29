@@ -75,6 +75,16 @@ const sortBySkillsReducer = (state) => {
     }
 }
 
+const allPlayersConfirmed = (state) => {
+    if (state.playersArray.length < state.amountPlayers * 2) {
+        return {
+            ...state,
+            teamsCreated: false,
+        }
+    }
+    return state;
+}
+
 const startMatchReducer = (state) => ({
     ...state,
     playersCreated: true,
@@ -97,9 +107,9 @@ const reducer = (state, action) => {
 
         case "PLAYER_ADDED": return playerAddedReducer(state, action);
 
-        case "SORT_RANDOMLY": return sortRandomReducer(state);
+        case "SORT_RANDOMLY": return allPlayersConfirmed(sortRandomReducer(state));
 
-        case "SORT_BY_SKILLS": return sortBySkillsReducer(state);
+        case "SORT_BY_SKILLS": return allPlayersConfirmed(sortBySkillsReducer(state));
 
         case "START_MATCH": return startMatchReducer(state);
 
