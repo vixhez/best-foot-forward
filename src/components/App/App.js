@@ -5,6 +5,7 @@ import PlayerList from '../PlayerList';
 import ResetButton from '../ResetButton';
 import RandomSortButton from '../RandomSortButton';
 import SkillSortButton from '../SkillSortButton';
+import ConfirmPlayersWarning from '../ConfirmPlayersWarning';
 import Team1Header from '../TeamHeader/Team1Header';
 import Team1 from '../Team/Team1';
 import Team2Header from '../TeamHeader/Team2Header';
@@ -24,9 +25,11 @@ const App = ({ info, teamsCreated, playersCreated }) => !info ? (
             <Header />
             <Players />
             <PlayerList />
+            <ConfirmPlayersWarning />
             <ResetButton />
             <RandomSortButton />
             <SkillSortButton />
+
 
         </div>
     : 
