@@ -24,13 +24,19 @@ const playerAddedReducer = (state, action) => ({
 
 const sortRandomReducer = (state) => {   
     const teamSplit = (state.playersArray.length) / 2;
+    const justNames = [];
 
     state.playersArray.sort(function(a, b) {
         return 0.5 - Math.random();
     });
 
-    const firstHalf = (state.playersArray.splice(0, teamSplit));
-    const secondHalf = state.playersArray;
+    state.playersArray.map(player => {
+        return justNames.push(player.playerName);
+    })
+
+    const firstHalf = (justNames.splice(0, teamSplit));
+    const secondHalf = justNames;
+    // need to access the array inside.. currently accessing the object. need to work out how to worm your way inside!
 
     return {
         ...state,
@@ -58,7 +64,7 @@ const sortBySkillsReducer = (state) => {
 
         insertAt += alternatingLength;
     }
-    
+
     const firstHalf = (above5.splice(0, teamSplit));
     const secondHalf = above5;
 
