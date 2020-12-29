@@ -9,14 +9,13 @@ import Team1Header from '../TeamHeader/Team1Header';
 import Team1 from '../Team/Team1';
 import Team2Header from '../TeamHeader/Team2Header';
 import Team2 from '../Team/Team2';
+import PlayButton from '../PlayButton';
 import Match from '../Match';
-// import StartGameButton from '../StartGameButton';
 
-const App = ({ info, teamsCreated }) => !info ? (
+const App = ({ info, teamsCreated, playersCreated }) => !info ? (
     <div>
         <Header />
         <Settings />
-        {/* <StartGameButton /> */}
     </div>
 ) : (
     <div>
@@ -30,13 +29,18 @@ const App = ({ info, teamsCreated }) => !info ? (
             <SkillSortButton />
 
         </div>
-        : 
+    : 
+    !playersCreated ?
         <div>
             <Team1Header />
             <Team1 />
             <Team2Header />
             <Team2 />
-            {/* <Match /> */}
+            <PlayButton />
+        </div>
+        :
+        <div>
+            <Match />
         </div> }
     </div>
 );
