@@ -75,6 +75,11 @@ const sortBySkillsReducer = (state) => {
     }
 }
 
+const startMatchReducer = (state) => ({
+    ...state,
+    playersCreated: true,
+})
+
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -95,6 +100,8 @@ const reducer = (state, action) => {
         case "SORT_RANDOMLY": return sortRandomReducer(state);
 
         case "SORT_BY_SKILLS": return sortBySkillsReducer(state);
+
+        case "START_MATCH": return startMatchReducer(state);
 
         default: return state;
     }

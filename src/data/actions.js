@@ -36,3 +36,9 @@ export const sortBySkills = () => {
         type: "SORT_BY_SKILLS",
     }
 }
+
+export const startMatch = () => {
+    return {
+        type: "START_MATCH",
+    }
+}

@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import App from './App';
 
-const mapStateToProps = ({ info, teamsCreated }) => ({
+const mapStateToProps = ({ info, teamsCreated, playersCreated }) => ({
         info,
-        teamsCreated
+        teamsCreated,
+        playersCreated
 });
 
 export default connect(mapStateToProps)(App);

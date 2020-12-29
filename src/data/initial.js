@@ -14,6 +14,7 @@ const initial = {
     info: false,
     playerComplete: false,
     teamsCreated: false,
+    playersCreated: false,
 }
 
 export default initial;
