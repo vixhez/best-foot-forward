@@ -54,26 +54,27 @@ const sortRandomReducer = (state) => {
 };
 
 const sortBySkillsReducer = (state) => {
-    const above5 = [];
-    const below5 = [];
+    const above6 = [];
+    const below6 = [];
     const teamSplit = (state.playersArray.length) / 2;
-    const alternatingLength = (state.playersArray.length - below5.length);
     let insertAt = 0;
 
     state.playersArray.map(player => {
-        return player.playerSkills > 5 ? above5.push(player.playerName) : below5.push(player.playerName);
+        return player.playerSkills > 6 ? above6.push(player.playerName) : below6.push(player.playerName);
     })
 
-    for (let i = 0; i <= (below5.length - 1); i++) {
-        let currentBelow5 = below5[i];
+    let alternatingLength = (state.playersArray.length - below6.length);
 
-        above5.splice(insertAt, 0, currentBelow5);
+    for (let i = 0; i <= (below6.length - 1); i++) {
+        let currentBelow6 = below6[i];
+
+        above6.splice(insertAt, 0, currentBelow6);
 
         insertAt += alternatingLength;
     }
 
-    const firstHalf = (above5.splice(0, teamSplit));
-    const secondHalf = above5;
+    const firstHalf = (above6.splice(0, teamSplit));
+    const secondHalf = above6;
 
     return {
         ...state,
