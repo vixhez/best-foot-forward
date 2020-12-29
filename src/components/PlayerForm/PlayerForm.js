@@ -33,7 +33,6 @@ class PlayerForm extends Component
                 playerSkills: enteredSkills
             }
         });
-        console.log(this.state.players);
     }
 
     handleSubmit(e) {
