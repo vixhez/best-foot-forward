@@ -1,19 +1,17 @@
 import initial from "./initial";
 
 const settingsReducer = (state, action) => ({
-  ...state,
-  info: true,
-  team1Name: action.data.team1Name,
-  team2Name: action.data.team2Name,
-  amountPlayers: action.data.amountPlayers,
-  team1Kit: action.data.team1Kit,
-  team2Kit: action.data.team2Kit,
-  team1Design: action.data.team1Design,
-  team2Design: action.data.team2Design,
-  chosenDesignTeam1: action.data.chosenDesignTeam1,
-  chosenDesignTeam2: action.data.chosenDesignTeam2,
-  chosenKitTeam1: action.data.chosenKitTeam1,
-  chosenKitTeam2: action.data.chosenKitTeam2,
+    ...state,
+    info: true,
+    team1Name: action.data.team1Name,
+    team2Name: action.data.team2Name,
+    amountPlayers: action.data.amountPlayers,
+    team1Kit: action.data.team1Kit,
+    team2Kit: action.data.team2Kit,
+    team1Design: action.data.team1Design,
+    team2Design: action.data.team2Design,
+    team1Banner: action.data.team1Banner,
+    team2Banner: action.data.team2Banner
 });
 
 // const playerDetailsReducer = (state, action) => ({
