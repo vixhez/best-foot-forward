@@ -131,8 +131,7 @@ class Settings extends Component {
                     <div
                         className='chosenStyle'
                         style={{
-                            backgroundImage: `url(${team1Design})`,
-                            backgroundSize: 'cover',
+                            backgroundImage: `url(${team1Design})`
                         }}>
                         <img src={team1Kit} alt="Chosen football kit" />
                     </div>
@@ -339,7 +338,7 @@ class Settings extends Component {
                     type="submit"
                     className="btn btn-primary">
                     Save
-                    </button>
+                </button>
             </form>
         );
     }

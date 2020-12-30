@@ -1,18 +1,27 @@
-const MatchTeam = ({ teamName, team }) => (
+const MatchTeam = ({ team, teamKit, teamDesign }) => (
     team.map((player, index) => {
-            return (
-                <div>
-                    <ul>
-                        <li
-                            class={index}
-                            key={index}>
-                            {team[index]}
-                        </li>
-                    </ul>
-                </div>
-            )
+        return (
+            <div>
+                <ul>
+                    <li
+                        class={index}
+                        key={index}>
+                        <div
+                            className="matchDesigns"
+                            style={{ backgroundImage: `url(${teamDesign})` }}
+                            >
+                            <img
+                                className="matchKits"
+                                src={`${teamKit}`} alt="Players with chosen kit" />
+                        </div>
+
+                        {team[index]}
+                    </li>
+                </ul>
+            </div>
+        )
     })
 );
-    
-    
+
+
 export default MatchTeam;
