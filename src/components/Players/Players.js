@@ -8,8 +8,6 @@ class Players extends Component {
         this.state = {
             amountPlayers: props.amountPlayers,
         };
-
-        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     render() {
