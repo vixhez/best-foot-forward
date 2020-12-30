@@ -25,10 +25,8 @@ class Settings extends Component {
             team2Kit: props.team2Kit,
             team1Design: props.team1Design,
             team2Design: props.team2Design,
-            chosenDesignTeam1: props.chosenDesignTeam1,
-            chosenDesignTeam2: props.chosenDesignTeam2,
-            chosenKitTeam1: props.chosenKitTeam1,
-            chosenKitTeam2: props.chosenKitTeam2,
+            team1Banner: props.team1Banner,
+            team2Banner: props.team2Banner
         };
 
         this.handleChangePlayers = this.handleChangePlayers.bind(this);
@@ -38,6 +36,8 @@ class Settings extends Component {
         this.handleClickTeam2Kit = this.handleClickTeam2Kit.bind(this);
         this.handleClickTeam1Design = this.handleClickTeam1Design.bind(this);
         this.handleClickTeam2Design = this.handleClickTeam2Design.bind(this);
+        this.handleChangeTeam1Banner = this.handleChangeTeam1Banner.bind(this);
+        this.handleChangeTeam2Banner = this.handleChangeTeam2Banner.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
 
     }
@@ -58,33 +58,37 @@ class Settings extends Component {
         e.preventDefault();
         console.log(e.currentTarget);
         this.setState({
-            team1Kit: e.currentTarget.className,
-            chosenKitTeam1: e.currentTarget.firstElementChild.src,
+            team1Kit: e.currentTarget.firstElementChild.src,
         });
     }
 
     handleClickTeam2Kit(e) {
         e.preventDefault();
         this.setState({
-            team2Kit: e.currentTarget.className,
-            chosenKitTeam2: e.currentTarget.firstElementChild.src,
+            team2Kit: e.currentTarget.firstElementChild.src,
         });
     }
 
     handleClickTeam1Design(e) {
         e.preventDefault();
         this.setState({
-            team1Design: e.currentTarget.className,
-            chosenDesignTeam1: e.currentTarget.firstElementChild.src,
+            team1Design: e.currentTarget.firstElementChild.src,
         });
     }
 
     handleClickTeam2Design(e) {
         e.preventDefault();
         this.setState({
-            team2Design: e.currentTarget.className,
-            chosenDesignTeam2: e.currentTarget.firstElementChild.src,
+            team2Design: e.currentTarget.firstElementChild.src,
         });
+    }
+
+    handleChangeTeam1Banner(e) {
+        this.setState({ team1Banner: e.currentTarget.value });
+    }
+
+    handleChangeTeam2Banner(e) {
+        this.setState({ team2Banner: e.currentTarget.value });
     }
 
     handleSubmit(e) {
@@ -93,7 +97,7 @@ class Settings extends Component {
     }
 
     render() {
-        const { team1Name, team2Name, amountPlayers, team1Kit, team2Kit, team1Design, team2Design, chosenDesignTeam1, chosenDesignTeam2, chosenKitTeam1, chosenKitTeam2 } = this.state;
+        const { team1Name, team2Name, amountPlayers, team1Kit, team2Kit, team1Design, team2Design, team1Banner, team2Banner } = this.state;
 
         return (
             <form
@@ -127,10 +131,10 @@ class Settings extends Component {
                     <div
                         className='chosenStyle'
                         style={{
-                            backgroundImage: `url(${chosenDesignTeam1})`,
+                            backgroundImage: `url(${team1Design})`,
                             backgroundSize: 'cover',
                         }}>
-                        <img src={chosenKitTeam1} alt="chosen kit" />
+                        <img src={team1Kit} alt="Chosen football kit" />
                     </div>
 
                     <div class="kits">
@@ -138,35 +142,35 @@ class Settings extends Component {
                             href="/"
                             onClick={this.handleClickTeam1Kit}
                             className="tshirt">
-                            <img src={tshirt} alt={team1Kit} />
+                            <img src={tshirt} alt='Tshirt' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam1Kit}
                             className="vest">
-                            <img src={vest} alt={team1Kit} />
+                            <img src={vest} alt='Vest' style={{ color: 'green' }} />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam1Kit}
                             className="heartShirt">
-                            <img src={heartShirt} alt={team1Kit} />
+                            <img src={heartShirt} alt='Shirt with heart on' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam1Kit}
                             className="collaredShirt">
-                            <img src={collaredShirt} alt={team1Kit} />
+                            <img src={collaredShirt} alt='Collared shirt' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam1Kit}
                             className="jumper">
-                            <img src={jumper} alt={team1Kit} />
+                            <img src={jumper} alt='Jumper' />
                         </a>
 
                     </div>
@@ -176,37 +180,48 @@ class Settings extends Component {
                             href="/"
                             onClick={this.handleClickTeam1Design}
                             className="bananas">
-                            <img src={bananas} alt={team1Design} />
+                            <img src={bananas} alt='Banana pattern' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam1Design}
                             className="clouds">
-                            <img src={clouds} alt={team1Design} />
+                            <img src={clouds} alt='Swirly cloud pattern' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam1Design}
                             className="cosmos">
-                            <img src={cosmos} alt={team1Design} />
+                            <img src={cosmos} alt='Cosmos landscape pattern' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam1Design}
                             className="ducks">
-                            <img src={ducks} alt={team1Design} />
+                            <img src={ducks} alt='Duck pattern' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam1Design}
                             className="paisley">
-                            <img src={paisley} alt={team1Design} />
+                            <img src={paisley} alt='Paisley pattern' />
                         </a>
                     </div>
+
+                    <label
+                        htmlFor="team1Banner"
+                        className="form-label">Team 1 Banner Message</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="team1Banner"
+                        onChange={this.handleChangeTeam1Banner}
+                        value={team1Banner}>
+                    </input>
 
                 </div>
                 <div className="team2 col-md-6 mt-4">
@@ -226,10 +241,10 @@ class Settings extends Component {
                     <div
                         className='chosenStyle'
                         style={{
-                            backgroundImage: `url(${chosenDesignTeam2})`,
+                            backgroundImage: `url(${team2Design})`,
                             backgroundSize: 'cover',
                         }}>
-                        <img src={chosenKitTeam2} alt="chosen kit" />
+                        <img src={team2Kit} alt="Chosen football kit" />
                     </div>
 
                     <div class="kits">
@@ -237,35 +252,35 @@ class Settings extends Component {
                             href="/"
                             onClick={this.handleClickTeam2Kit}
                             className="tshirt">
-                            <img src={tshirt} alt={team2Kit} />
+                            <img src={tshirt} alt='Tshirt' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam2Kit}
                             className="vest">
-                            <img src={vest} alt={team2Kit} />
+                            <img src={vest} alt='Vest' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam2Kit}
                             className="heartShirt">
-                            <img src={heartShirt} alt={team2Kit} />
+                            <img src={heartShirt} alt='Shirt with heart on' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam2Kit}
                             className="collaredShirt">
-                            <img src={collaredShirt} alt={team2Kit} />
+                            <img src={collaredShirt} alt='Collared shirt' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam2Kit}
                             className="jumper">
-                            <img src={jumper} alt={team2Kit} />
+                            <img src={jumper} alt='Jumper' />
                         </a>
 
                     </div>
@@ -275,37 +290,48 @@ class Settings extends Component {
                             href="/"
                             onClick={this.handleClickTeam2Design}
                             className="bananas">
-                            <img src={bananas} alt={team2Design} />
+                            <img src={bananas} alt='Banana pattern' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam2Design}
                             className="clouds">
-                            <img src={clouds} alt={team2Design} />
+                            <img src={clouds} alt='Cloud pattern' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam2Design}
                             className="cosmos">
-                            <img src={cosmos} alt={team2Design} />
+                            <img src={cosmos} alt='Cosmos landscape pattern' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam2Design}
                             className="ducks">
-                            <img src={ducks} alt={team2Design} />
+                            <img src={ducks} alt='Duck pattern' />
                         </a>
 
                         <a
                             href="/"
                             onClick={this.handleClickTeam2Design}
                             className="paisley">
-                            <img src={paisley} alt={team2Design} />
+                            <img src={paisley} alt='Paisley pattern' />
                         </a>
                     </div>
+
+                    <label
+                        htmlFor="team2Banner"
+                        className="form-label">Team 2 Banner Message</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="team2Banner"
+                        onChange={this.handleChangeTeam2Banner}
+                        value={team2Banner}>
+                    </input>
 
                 </div>
 
