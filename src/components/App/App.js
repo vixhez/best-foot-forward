@@ -16,6 +16,7 @@ import Team1 from '../Team/Team1';
 import Team2Header from '../TeamHeader/Team2Header';
 import Team2 from '../Team/Team2';
 import PlayButton from '../PlayButton';
+import BackOneButton from '../BackOneButton';
 
 import Match from '../Match';
 
@@ -56,11 +57,14 @@ const App = ({ info, teamsCreated, playersCreated }) => !info ? (
     : 
     !playersCreated ?
         <div className='playersConfirm'>
+            <Header />
             <Team1Header />
             <Team1 />
             <Team2Header />
             <Team2 />
             <PlayButton />
+            <BackOneButton />
+            <ResetButton />
         </div>
         :
         <div className='match'>

@@ -55,6 +55,6 @@ p {
     width: 100%;
 } */
 
-/* .landingPage main chosenStyle img {
+.landingPage main .chosenStyle img {
     color: var(--grey);
-} */
+}
