@@ -1,0 +1,55 @@
+.playerForm {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.playerForm form {
+    justify-content: center;
+}
+
+.playerForm main form {
+    display: flex;
+    justify-content: center;
+}
+
+.playerForm main .playerFormParent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.playerForm main {
+    width: 75%;
+    background-color: var(--grey);
+}
+
+.playerForm aside {
+    width: 25%;
+    background-color: var(--darkViolet);
+    border-left: 2px solid var(--lightGreen);
+    padding: 5px;
+}
+
+.playerForm ul {
+    padding-left: 0;
+}
+
+.playerFormParent input, .playerFormParent input:focus {
+    background-color: var(--darkViolet);
+    border: 1px solid var(--grey);
+    border-radius: 2%;
+    width: 100%;
+}
+
+.playerFormParent {
+    margin: 1rem;
+    border: 2px solid var(--lightGreen);
+    padding: 1rem;
+    max-width: 600px;
+}
+
+.playerFormParent button {
+    margin: 1rem;
+}
+

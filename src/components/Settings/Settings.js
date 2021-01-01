@@ -102,243 +102,271 @@ class Settings extends Component {
         return (
             <form
                 onSubmit={this.handleSubmit}>
-
-                <label htmlFor="players">How many on each team? (3-11)</label>
-                <input
-                    type="number"
-                    id="players"
-                    name="players"
-                    min="3"
-                    max="11"
-                    onChange={this.handleChangePlayers}
-                    value={amountPlayers}
-                />
-
-                <div className="team1 col-md-6 mt-4">
-                    <label
-                        htmlFor="team1"
-                        className="form-label">Team 1 Name</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="team1"
-                        onChange={this.handleChangeTeam1}
-                        value={team1Name}>
-                    </input>
-
-                    <h3>{team1Name}</h3>
-
-                    <div
-                        className='chosenStyle'
-                        style={{
-                            backgroundImage: `url(${team1Design})`
-                        }}>
-                        <img src={team1Kit} alt="Chosen football kit" />
+                
+                
+                    <div className='quantityParent'>
+                        <section className='playerQuantityInput'>
+                            <label htmlFor="players">How many on each team? (3-11)</label>
+                            <input
+                                type="number"
+                                id="players"
+                                name="players"
+                                min="3"
+                                max="11"
+                                onChange={this.handleChangePlayers}
+                                value={amountPlayers}
+                            />
+                        </section>
                     </div>
 
-                    <div class="kits">
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam1Kit}
-                            className="tshirt">
-                            <img src={tshirt} alt='Tshirt' />
-                        </a>
+                    <div className='sectionsParent'>
+                        <section className='player1'>
+                        <div className='teamNameInput'>
+                            <label
+                                htmlFor="team1"
+                                // className="form-label"
+                                >
+                                    Team 1 Name</label>
+                            <input
+                                type="text"
+                                // className="form-control"
+                                id="team1"
+                                onChange={this.handleChangeTeam1}
+                                value={team1Name}>
+                            </input>
 
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam1Kit}
-                            className="vest">
-                            <img src={vest} alt='Vest' style={{ color: 'green' }} />
-                        </a>
+                            <h3>{team1Name}</h3>
 
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam1Kit}
-                            className="heartShirt">
-                            <img src={heartShirt} alt='Shirt with heart on' />
-                        </a>
+                            <div className ='chosenStyleParent'>
+                                <div
+                                    className='chosenStyle'
+                                    style={{
+                                        backgroundImage: `url(${team1Design})`
+                                    }}>
+                                    <img src={team1Kit} alt="Chosen football kit" />
+                                </div>
+                            </div>
 
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam1Kit}
-                            className="collaredShirt">
-                            <img src={collaredShirt} alt='Collared shirt' />
-                        </a>
+                            <div class="teamKits">
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam1Kit}
+                                    className="tshirt">
+                                    <img src={tshirt} alt='Tshirt' />
+                                </a>
 
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam1Kit}
-                            className="jumper">
-                            <img src={jumper} alt='Jumper' />
-                        </a>
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam1Kit}
+                                    className="vest">
+                                    <img src={vest} alt='Vest' style={{ color: 'green' }} />
+                                </a>
 
-                    </div>
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam1Kit}
+                                    className="heartShirt">
+                                    <img src={heartShirt} alt='Shirt with heart on' />
+                                </a>
 
-                    <div className="patterns">
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam1Design}
-                            className="bananas">
-                            <img src={bananas} alt='Banana pattern' />
-                        </a>
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam1Kit}
+                                    className="collaredShirt">
+                                    <img src={collaredShirt} alt='Collared shirt' />
+                                </a>
 
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam1Design}
-                            className="clouds">
-                            <img src={clouds} alt='Swirly cloud pattern' />
-                        </a>
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam1Kit}
+                                    className="jumper">
+                                    <img src={jumper} alt='Jumper' />
+                                </a>
 
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam1Design}
-                            className="cosmos">
-                            <img src={cosmos} alt='Cosmos landscape pattern' />
-                        </a>
+                            </div>
 
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam1Design}
-                            className="ducks">
-                            <img src={ducks} alt='Duck pattern' />
-                        </a>
+                            <div className="teamDesigns">
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam1Design}
+                                    className="bananas">
+                                    <img src={bananas} alt='Banana pattern' />
+                                </a>
 
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam1Design}
-                            className="paisley">
-                            <img src={paisley} alt='Paisley pattern' />
-                        </a>
-                    </div>
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam1Design}
+                                    className="clouds">
+                                    <img src={clouds} alt='Swirly cloud pattern' />
+                                </a>
 
-                    <label
-                        htmlFor="team1Banner"
-                        className="form-label">Team 1 Banner Message</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="team1Banner"
-                        onChange={this.handleChangeTeam1Banner}
-                        value={team1Banner}>
-                    </input>
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam1Design}
+                                    className="cosmos">
+                                    <img src={cosmos} alt='Cosmos landscape pattern' />
+                                </a>
 
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam1Design}
+                                    className="ducks">
+                                    <img src={ducks} alt='Duck pattern' />
+                                </a>
+
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam1Design}
+                                    className="paisley">
+                                    <img src={paisley} alt='Paisley pattern' />
+                                </a>
+                            </div>
+
+                            <div className='teamBannerInput'>
+                                <label
+                                    htmlFor="team1Banner"
+                                    // className="form-label"
+                                    >
+                                        Team 1 Banner Message</label>
+                                <input
+                                    type="text"
+                                    // className="form-control"
+                                    id="team1Banner"
+                                    onChange={this.handleChangeTeam1Banner}
+                                    value={team1Banner}>
+                                </input>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className='player2'>
+                        <div className='teamNameInput'>
+                            <label
+                                htmlFor="team2"
+                                // className="form-label"
+                                >
+                                    Team 2 Name</label>
+                            <input
+                                type="text"
+                                // className="form-control"
+                                id="team1"
+                                onChange={this.handleChangeTeam2}
+                                value={team2Name}>
+                            </input>
+
+                            <h3>{team2Name}</h3>
+
+                            <div className ='chosenStyleParent'>
+                                <div
+                                    className='chosenStyle'
+                                    style={{
+                                        backgroundImage: `url(${team2Design})`,
+                                        backgroundSize: 'cover',
+                                    }}>
+                                    <img src={team2Kit} alt="Chosen football kit" />
+                                </div>
+                            </div>
+
+                            <div class="teamKits">
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam2Kit}
+                                    className="tshirt">
+                                    <img src={tshirt} alt='Tshirt' />
+                                </a>
+
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam2Kit}
+                                    className="vest">
+                                    <img src={vest} alt='Vest' />
+                                </a>
+
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam2Kit}
+                                    className="heartShirt">
+                                    <img src={heartShirt} alt='Shirt with heart on' />
+                                </a>
+
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam2Kit}
+                                    className="collaredShirt">
+                                    <img src={collaredShirt} alt='Collared shirt' />
+                                </a>
+
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam2Kit}
+                                    className="jumper">
+                                    <img src={jumper} alt='Jumper' />
+                                </a>
+
+                            </div>
+
+                            <div className="teamDesigns">
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam2Design}
+                                    className="bananas">
+                                    <img src={bananas} alt='Banana pattern' />
+                                </a>
+
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam2Design}
+                                    className="clouds">
+                                    <img src={clouds} alt='Cloud pattern' />
+                                </a>
+
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam2Design}
+                                    className="cosmos">
+                                    <img src={cosmos} alt='Cosmos landscape pattern' />
+                                </a>
+
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam2Design}
+                                    className="ducks">
+                                    <img src={ducks} alt='Duck pattern' />
+                                </a>
+
+                                <a
+                                    href="/"
+                                    onClick={this.handleClickTeam2Design}
+                                    className="paisley">
+                                    <img src={paisley} alt='Paisley pattern' />
+                                </a>
+                            </div>
+
+                            <div className='teamBannerInput'>
+                                <label
+                                    htmlFor="teamBanner"
+                                    // className="form-label"
+                                    >
+                                        Team 2 Banner Message</label>
+                                <input
+                                    type="text"
+                                    // className="form-control"
+                                    id="team2Banner"
+                                    onChange={this.handleChangeTeam2Banner}
+                                    value={team2Banner}>
+                                </input>
+                            </div>
+                        </div>
+                    </section>
                 </div>
-                <div className="team2 col-md-6 mt-4">
-                    <label
-                        htmlFor="team2"
-                        className="form-label">Team 2 Name</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="team1"
-                        onChange={this.handleChangeTeam2}
-                        value={team2Name}>
-                    </input>
 
-                    <h3>{team2Name}</h3>
-
-                    <div
-                        className='chosenStyle'
-                        style={{
-                            backgroundImage: `url(${team2Design})`,
-                            backgroundSize: 'cover',
-                        }}>
-                        <img src={team2Kit} alt="Chosen football kit" />
-                    </div>
-
-                    <div class="kits">
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam2Kit}
-                            className="tshirt">
-                            <img src={tshirt} alt='Tshirt' />
-                        </a>
-
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam2Kit}
-                            className="vest">
-                            <img src={vest} alt='Vest' />
-                        </a>
-
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam2Kit}
-                            className="heartShirt">
-                            <img src={heartShirt} alt='Shirt with heart on' />
-                        </a>
-
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam2Kit}
-                            className="collaredShirt">
-                            <img src={collaredShirt} alt='Collared shirt' />
-                        </a>
-
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam2Kit}
-                            className="jumper">
-                            <img src={jumper} alt='Jumper' />
-                        </a>
-
-                    </div>
-
-                    <div className="patterns">
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam2Design}
-                            className="bananas">
-                            <img src={bananas} alt='Banana pattern' />
-                        </a>
-
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam2Design}
-                            className="clouds">
-                            <img src={clouds} alt='Cloud pattern' />
-                        </a>
-
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam2Design}
-                            className="cosmos">
-                            <img src={cosmos} alt='Cosmos landscape pattern' />
-                        </a>
-
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam2Design}
-                            className="ducks">
-                            <img src={ducks} alt='Duck pattern' />
-                        </a>
-
-                        <a
-                            href="/"
-                            onClick={this.handleClickTeam2Design}
-                            className="paisley">
-                            <img src={paisley} alt='Paisley pattern' />
-                        </a>
-                    </div>
-
-                    <label
-                        htmlFor="team2Banner"
-                        className="form-label">Team 2 Banner Message</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="team2Banner"
-                        onChange={this.handleChangeTeam2Banner}
-                        value={team2Banner}>
-                    </input>
-
+                <div className='buttonParent'>
+                    <button
+                        className='btn'
+                        type="submit">
+                        Save Settings
+                    </button>
                 </div>
-
-                <button
-                    type="submit"
-                    className="btn btn-primary">
-                    Save
-                </button>
             </form>
         );
     }

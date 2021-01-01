@@ -1,11 +1,12 @@
 const PlayerList = ({ playersArray, players }) => (
     playersArray.map((player, index) => {
         return (
-            <div className="team1 col-md-6 mt-4">
-                <ul>
+            <div className="playerListParent">
+                <ul className='playerListUl'>
                     <li
+                        className='playerListLi'
                         key={index}>
-                            Player: {player.playerName}, skill level: {player.playerSkills}
+                            <span>Player:</span> {player.playerName}<span>, skill level:</span> {player.playerSkills}
                     </li>
                 </ul>
             </div>

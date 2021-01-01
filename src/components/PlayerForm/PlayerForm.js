@@ -1,7 +1,6 @@
 import { Component } from 'react';
 
-class PlayerForm extends Component
-{
+class PlayerForm extends Component {
     constructor(props) {
         super(props);
 
@@ -46,45 +45,45 @@ class PlayerForm extends Component
 
         return !playerComplete ? (
             <div
-                id={ this.props.id }
-                className="team1 col-md-6 mt-4">
+                id={this.props.id}>
                 <form
-                    onSubmit={ this.handleSubmit }>
-                    <label
-                        htmlFor="playerName"
-                        className="form-label">Player Name</label>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id={ this.props.id }
-                        onChange={ this.handleChangePlayerName }
-                        value={ players.playerName }
+                    onSubmit={this.handleSubmit}>
+                    <div className='playerFormParent'>
+                        <label
+                            htmlFor="playerName"
+                            >Player Name</label>
+                        <input
+                            type="text"
+                            id={this.props.id}
+                            onChange={this.handleChangePlayerName}
+                            value={players.playerName}
                         >
-                    </input>
-            
-                    <label
-                        htmlFor="playerSkills">
-                    Skill Level
-                    </label>
-                    <input
-                        type="range"
-                        min="0"
-                        max="10"
-                        value={ +players.playerSkills }
-                        id={ this.props.id }
-                        onChange={ this.handleChangePlayerSkills }>    
-                    </input>
+                        </input>
 
-                    <button
-                        type="submit"
-                        className="btn btn-primary">
-                    Confirm Player
-                    </button>
+                        <label
+                            htmlFor="playerSkills">
+                            Skill Level
+                    </label>
+                        <input
+                            type="range"
+                            min="0"
+                            max="10"
+                            value={+players.playerSkills}
+                            id={this.props.id}
+                            onChange={this.handleChangePlayerSkills}>
+                        </input>
+
+                        <button
+                            type="submit"
+                            className="btn btn-primary">
+                            Confirm Player
+                        </button>
+                    </div>
                 </form>
             </div>
         ) : (
-            <p>{ players.playerName } added!</p>
-        );
+                <p>{players.playerName} added!</p>
+            );
     }
 }
 

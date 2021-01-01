@@ -1,40 +1,60 @@
 import Header from '../Header/Header';
+
 import Settings from '../Settings';
+import SettingsInstructions from '../SettingsInstructions/SettingsInstructions';
+
 import Players from '../Players';
 import PlayerList from '../PlayerList';
+import ConfirmPlayersWarning from '../ConfirmPlayersWarning';
 import ResetButton from '../ResetButton';
 import RandomSortButton from '../RandomSortButton';
 import SkillSortButton from '../SkillSortButton';
-import ConfirmPlayersWarning from '../ConfirmPlayersWarning';
+import PlayersInstructions from '../PlayersInstructions/PlayersInstructions'
+
 import Team1Header from '../TeamHeader/Team1Header';
 import Team1 from '../Team/Team1';
 import Team2Header from '../TeamHeader/Team2Header';
 import Team2 from '../Team/Team2';
 import PlayButton from '../PlayButton';
+
 import Match from '../Match';
 
 const App = ({ info, teamsCreated, playersCreated }) => !info ? (
-    <div>
-        <Header />
-        <Settings />
+    <div className='landingPage'>
+        <main>
+            <Header />
+            <Settings />
+        </main>
+
+        <aside>
+            <SettingsInstructions />
+        </aside>
     </div>
 ) : (
     <div>
     { !teamsCreated ? 
-        <div>
-            <Header />
-            <Players />
+        <div className='playerForm'>
+            <main>
+                <Header />
+                <Players />
+                <ConfirmPlayersWarning />
+                <div className='randomSkillButtonsParent'>
+                    <RandomSortButton />
+                    <SkillSortButton />
+                </div>
+                <div className='resetButtonParent'>
+                    <ResetButton />
+                </div>
+            </main>
+
+            <aside>
             <PlayerList />
-            <ConfirmPlayersWarning />
-            <ResetButton />
-            <RandomSortButton />
-            <SkillSortButton />
-
-
+            <PlayersInstructions />
+            </aside>
         </div>
     : 
     !playersCreated ?
-        <div>
+        <div className='playersConfirm'>
             <Team1Header />
             <Team1 />
             <Team2Header />
@@ -42,7 +62,7 @@ const App = ({ info, teamsCreated, playersCreated }) => !info ? (
             <PlayButton />
         </div>
         :
-        <div>
+        <div className='match'>
             <Match />
         </div> }
     </div>

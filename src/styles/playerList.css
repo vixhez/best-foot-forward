@@ -1,0 +1,18 @@
+.playerForm aside .playerListParent {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.playerForm aside .playerListParent .playerListUl {
+    list-style: none;
+    width: 100%;
+    justify-self: center;
+    padding-left: 0;
+}
+
+.playerForm aside .playerListParent .playerListLi {
+    background-color: var(--lightViolet);
+    padding: 5px;
+    margin: 2px;
+    border: 2px solid var(--lightGreen);
+}
