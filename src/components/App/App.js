@@ -32,46 +32,57 @@ const App = ({ info, teamsCreated, playersCreated }) => !info ? (
         </aside>
     </div>
 ) : (
-    <div>
-    { !teamsCreated ? 
-        <div className='playerForm'>
-            <main>
-                <Header />
-                <Players />
-                <ConfirmPlayersWarning />
-                <div className='randomSkillButtonsParent'>
-                    <RandomSortButton />
-                    <SkillSortButton />
-                </div>
-                <div className='resetButtonParent'>
-                    <ResetButton />
-                </div>
-            </main>
+        <div>
+            { !teamsCreated ?
+                <div className='playerForm'>
+                    <main>
+                        <Header />
+                        <Players />
+                        <ConfirmPlayersWarning />
+                        <div className='randomSkillButtonsParent'>
+                            <RandomSortButton />
+                            <SkillSortButton />
+                        </div>
+                        <div className='resetButtonParent'>
+                            <ResetButton />
+                        </div>
+                    </main>
 
-            <aside>
-            <PlayerList />
-            {/* <hr className='playerListHr' /> */}
-            <PlayersInstructions />
-            </aside>
+                    <aside>
+                        <PlayerList />
+                        {/* <hr className='playerListHr' /> */}
+                        <PlayersInstructions />
+                    </aside>
+                </div>
+                :
+                !playersCreated ?
+                    <div className='playerConfirm'>
+                        <Header />
+                        <div className='teamsParent'>
+                            <div className='team1Parent'>
+                                <Team1Header />
+                                <Team1 />
+                            </div>
+                            <div className='team2Parent'>
+                                <Team2Header />
+                                <Team2 />
+                            </div>
+                        </div>
+                        <div className='buttons'>      <div className='playButtonParent'>
+                            <PlayButton />
+                        </div>
+                            <div className='backResetButtonParent'>
+                                <BackOneButton />
+                                <ResetButton />
+                            </div>
+                        </div>
+                    </div>
+                    :
+                    <div className='match'>
+                        <Match />
+                    </div>}
         </div>
-    : 
-    !playersCreated ?
-        <div className='playersConfirm'>
-            <Header />
-            <Team1Header />
-            <Team1 />
-            <Team2Header />
-            <Team2 />
-            <PlayButton />
-            <BackOneButton />
-            <ResetButton />
-        </div>
-        :
-        <div className='match'>
-            <Match />
-        </div> }
-    </div>
-);
+    );
 
 
 export default App;

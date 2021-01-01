@@ -50,11 +50,21 @@ p {
     text-align: center;
 }
 
+.playerForm .playerFormWarn {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 2.5rem;
+}
+
 /* .playerForm hr {
     color: white;
     width: 100%;
 } */
 
 .landingPage main .chosenStyle img {
-    color: var(--grey);
+    color: var(--lightViolet);
 }
+
+/* .playerForm aside .playerSettingsSeparate {
+    color: var(--darkGreen);
+} */

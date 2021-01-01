@@ -4,9 +4,9 @@
     justify-content: center;
 }
 
-.playerForm form {
+/* .playerForm form {
     justify-content: center;
-}
+} */
 
 .playerForm main form {
     display: flex;
@@ -49,10 +49,6 @@
     max-width: 600px;
 }
 
-.playerFormParent button {
-    margin: 1rem;
-}
-
 .playerFormParent .skillSlider, .playerFormParent .skillSlider:focus {
     background-color: var(--lightViolet);
     height: 5px;
@@ -64,7 +60,7 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     height: 15px;
     width: 15px;
-    background: var(--lightGreen);
+    background: var(--darkGreen);
     border: none;
     border-radius: 50%;
    }
@@ -72,7 +68,7 @@ input[type="range"]::-webkit-slider-thumb {
    input[type="range"]::-moz-range-thumb {
     height: 15px;
     width: 15px;
-    background: var(--lightGreen);
+    background: var(--darkGreen);
     border: none;
     border-radius: 50%;
    }
