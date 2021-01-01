@@ -53,8 +53,8 @@
     margin: 1rem;
 }
 
-.playerFormParent .skillSlider {
-    background-color: var(--darkViolet);
+.playerFormParent .skillSlider, .playerFormParent .skillSlider:focus {
+    background-color: var(--lightViolet);
     height: 5px;
     border-radius: 2%;
     width: 100%;

@@ -49,6 +49,7 @@ const App = ({ info, teamsCreated, playersCreated }) => !info ? (
 
             <aside>
             <PlayerList />
+            {/* <hr className='playerListHr' /> */}
             <PlayersInstructions />
             </aside>
         </div>
