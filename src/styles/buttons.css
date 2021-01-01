@@ -1,0 +1,32 @@
+.buttonParent {
+    display: flex;
+    justify-content: center;
+}
+
+.landingPage button, .playerForm button {
+    color: var(--lightGreen);
+    background-color: var(--darkViolet);
+    border: none;
+    border-radius: 1%;
+    border: solid 2px var(--grey);
+    margin: 10px;
+    padding: 5px;
+}
+
+.landingPage button:hover, .playerForm button:hover {
+    color: var(--lightGreen);
+    background-color: var(--grey);
+    border: solid 2px var(--darkViolet);
+    border-radius: 1%;
+}
+
+.playerForm .resetButtonParent {
+    display: flex;
+    justify-content: center;
+}
+
+
+.playerForm .randomSkillButtonsParent {
+    display: flex;
+    justify-content: center;
+}

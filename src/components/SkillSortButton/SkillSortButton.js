@@ -1,7 +1,7 @@
 const SkillSortButton = ({ sortBySkills }) => (
     <button
     onClick={ sortBySkills }
-    class="btn btn-secondary">
+    class="btn skillButton">
         Sort Players By Skill
 </button>
 );

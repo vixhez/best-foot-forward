@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'Permanent Marker';
+    src: url(fonts/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Andika';
+    src: url(fonts/AndikaNewBasic-Regular.ttf);
+}
+
+* {
+    font-family: 'Andika', sans serif;
+}
+
+p {
+    color: var(--grey);
+}
+
+.landingPage main label, .landingPage aside p, .playerForm main label {
+    color: var(--lightGreen);
+}
+
+.landingPage input, .landingPage input:focus, .playerForm input, .playerForm input:focus {
+    color: var(--lightViolet);
+}
+
+.landingPage input:active, .playerForm input:active {
+    color: var(--lightViolet);
+}
+
+.playerForm aside span {
+    font-weight: bold;
+    color: var(--darkViolet);
+}
+
+.playerForm main p, .playerForm aside p {
+    color: var(--lightGreen);
+}
+
+.playerForm aside .playerListParent .playerListLi {
+    color: var(--grey);
+    text-align: center;
+}
+
+.playerForm main p, .playerForm aside p {
+    color: var(--lightGreen);
+}
+
+.playerForm p {
+    text-align: center;
+}
+
+/* .landingPage main chosenStyle img {
+    color: var(--grey);
+} */
