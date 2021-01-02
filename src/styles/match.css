@@ -1,21 +1,17 @@
 .matchParent {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-}
-
-.pitch {
-    display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-content: center;
+    margin-top: 8rem;
+    /* width: 70%; */
     
 }
 
 .team1Parent {
     display: flex;
-    align-content: center;
-    justify-content: right;
+    /* align-content: center; */
+    /* justify-content: right; */
     /* justify-content: center; */
     /* flex-flow: row wrap; */
     /* height: auto; */
@@ -23,8 +19,8 @@
 
 .team2Parent {
     display: flex;
-    align-content: center;
-    justify-content: left;
+    /* align-content: center; */
+    /* justify-content: left; */
     /* justify-content: center; */
     /* flex-flow: row wrap; */
     /* height: 80rem; */
@@ -32,12 +28,36 @@
 
 .matchTeams {
     display: flex;
-    /* justify-content: center; */
+    flex-flow: column wrap;
+    justify-content: center;
 }
 
-.matchParent ul {
+/* .matchTeams li {
+    justify-content: center;
+} */
+
+.matchTeams {
+    display: flex;
+    justify-content: center;
+}
+
+.matchTeams ul {
     list-style-type: none;
-    padding-left: 0;
+    padding: 0;
+}
+
+/* .matchDesigns img {
+    justify-content: center;
+} */
+
+.matchTeams ul li {
+    /* display: flex;
+    flex-flow: column wrap; */
+    justify-content: center;
+}
+
+.matchTeams ul li matchDesigns, .matchTeams ul li .matchKits {
+    justify-content: center;
 }
 
 .matchParent .headerParent {

@@ -59,9 +59,10 @@
     margin-bottom: auto;
 }
 
-.matchTeams {
+.matchTeams ul {
     display: flex;
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
+    justify-content: center;
 }
 
 .matchKits {
@@ -81,12 +82,12 @@
 }
 
 .matchParent .team1Crowd {
-    transform: rotate(270deg);
+    transform: rotate(280deg);
     background-size: cover;
 }
 
 .matchParent .team2Crowd {
-    transform: rotate(450deg);
+    transform: rotate(440deg);
     background-size: cover;
 }
 
@@ -108,23 +109,30 @@ margin-top: 5rem;
     height: 22rem; 
 }
 
-.pitch {
+/* .pitch {
     display: flex; 
     padding: 10rem 0 10rem 0;
     margin-top: 5rem;
 
-}
+} */
 
 .matchParent li {
     padding: 2rem;
 }
 
-.team1Match {
-    padding-right: 3rem;
-}
 
-.matchParent .team1Match,
-.matchParent .team2Match {
+.teamsOnPitch {
+    display: flex;
     background-color: var(--darkGreen);
     border-radius: 1%;
+    /* width: 21rem; */
+    justify-items: center;
+}
+
+.teamsOnPitch .team1OnPitch,
+.teamsOnPitch .team2OnPitch {
+    display: flex;
+    flex-flow: column wrap;
+    justify-self: center;
+
 }

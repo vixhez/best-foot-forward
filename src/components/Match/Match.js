@@ -6,11 +6,11 @@ import team2Crowd from '../../assets/team2Crowd.png';
 
 const Match = ({ team1Kit, team2Kit, team1Design, team2Design, team1Banner, team2Banner, team1Name, team2Name }) => (
     <>
-    <div className='headerParent'>
-    <h2>{team1Name} <span>vs</span> {team2Name}</h2>
-</div>
-    <div className='matchParent'>
-        <div className='pitch'>
+        <div className='headerParent'>
+            <h2>{team1Name} <span>vs</span> {team2Name}</h2>
+        </div>
+        <div className='matchParent'>
+            {/* <div className='pitch'> */}
             <div className='team1Parent'>
                 <div
                     className='team1Crowd'
@@ -22,14 +22,16 @@ const Match = ({ team1Kit, team2Kit, team1Design, team2Design, team1Banner, team
                         {team1Banner}
                     </p>
                 </div>
-                <div className='team1Match'>
-                    <MatchTeam1 />
+            </div>
+            <div className='teamsOnPitch'>
+                <div className='team1OnPitch'> <MatchTeam1 />
+                </div>
+                <div className='team2OnPitch'>
+                    <MatchTeam2 />
                 </div>
             </div>
             <div className='team2Parent'>
-                <div className='team2Match'>
-                    <MatchTeam2 />
-                </div>
+
                 <div
                     className='team2Crowd'
                     style={{ backgroundImage: `url(${team2Design})` }}>
@@ -40,9 +42,10 @@ const Match = ({ team1Kit, team2Kit, team1Design, team2Design, team1Banner, team
                         {team2Banner}
                     </p>
                 </div>
+
             </div>
         </div>
-    </div>
+        {/* </div> */}
     </>
 );
 
