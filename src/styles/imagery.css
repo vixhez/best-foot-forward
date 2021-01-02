@@ -42,10 +42,12 @@
     border-radius: 100%;
     height: 14rem;
     width: 14rem;
+    background-color: var(--lightViolet);
     background-size: cover;
     display: flex;
     justify-content: center;
     align-content: center;
+    border: 3px solid var(--darkGreen);
 }
   
 .chosenStyle img {
@@ -56,15 +58,81 @@
     margin-top: auto;
     margin-bottom: auto;
 }
-  
+
+.matchTeams ul {
+    display: flex;
+    /* flex-flow: row wrap; */
+    justify-content: center;
+}
+
 .matchKits {
-    width: 80px;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
 }
   
 .matchDesigns {
-    width: 100px;
-    height: 100px;
+    display: flex;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
     border-radius: 100%;
     background-size: cover; 
 }
+
+.matchParent .team1Crowd {
+    transform: rotate(280deg);
+    background-size: cover;
+}
+
+.matchParent .team2Crowd {
+    transform: rotate(440deg);
+    background-size: cover;
+}
+
+.matchParent .team1Crowd,
+.matchParent .team1CrowdImage img,
+.matchParent .team2Crowd,
+.matchParent .team2CrowdImage img {
+    width: 22rem;
+}
+
+.team1Parent, .team2Parent {
+margin-top: 5rem;
+}
+
+.matchParent .team1Crowd,
+.matchParent .team2Crowd {
+    border-radius: 1%;
+    height: 12rem; 
+}
+
+/* .pitch {
+    display: flex; 
+    padding: 10rem 0 10rem 0;
+    margin-top: 5rem;
+
+} */
+
+.matchParent li {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+
+.teamsOnPitch {
+    display: flex;
+    background-color: var(--darkGreen);
+    border-radius: 1%;
+    /* width: 21rem; */
+    justify-items: center;
+}
+
+.teamsOnPitch .team1OnPitch,
+.teamsOnPitch .team2OnPitch {
+    display: flex;
+    flex-flow: column wrap;
+    justify-self: center;
+
+}
+

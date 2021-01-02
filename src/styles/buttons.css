@@ -3,7 +3,14 @@
     justify-content: center;
 }
 
-.landingPage button, .playerForm button {
+.playerFormParent button {
+    margin: 1rem;
+}
+
+.landingPage button,
+.playerForm button,
+.playerConfirm button,
+.match button {
     color: var(--lightGreen);
     background-color: var(--darkViolet);
     border: none;
@@ -13,20 +20,29 @@
     padding: 5px;
 }
 
-.landingPage button:hover, .playerForm button:hover {
+.landingPage button:hover,
+.playerForm button:hover,
+.playerConfirm button:hover,
+.match button:hover {
     color: var(--lightGreen);
     background-color: var(--grey);
     border: solid 2px var(--darkViolet);
     border-radius: 1%;
 }
 
-.playerForm .resetButtonParent {
+.playerForm .resetButtonParent,
+.playerForm .randomSkillButtonsParent,
+.playerConfirm .playButtonParent,
+.playerConfirm .backResetButtonParent,
+.match .matchResetButton {
     display: flex;
     justify-content: center;
 }
 
+.playerConfirm .buttons {
+    display: block;
+}
 
-.playerForm .randomSkillButtonsParent {
-    display: flex;
-    justify-content: center;
+.match .matchResetButton {
+    margin-top: 5rem;
 }

@@ -63,9 +63,6 @@ const sortBySkillsReducer = (state) => {
 
     let alternatingLength = Math.ceil((state.playersArray.length / below6.length));
 
-    console.log(above6);
-    console.log(below6);
-
     for (let i = 0; i <= (below6.length - 1); i++) {
         let currentBelow6 = below6[i];
 
@@ -112,6 +109,12 @@ const reducer = (state, action) => {
             team1Name: state.team1Name,
             team2Name: state.team2Name,
             amountPlayers: state.amountPlayers,
+            team1Kit: state.team1Kit,
+            team2Kit: state.team2Kit,
+            team1Design: state.team1Design,
+            team2Design: state.team2Design,
+            team1Banner: state.team1Banner,
+            team2Banner: state.team2Banner,
         }
 
         case "PLAYER_ADDED": return playerAddedReducer(state, action);
@@ -121,6 +124,20 @@ const reducer = (state, action) => {
         case "SORT_BY_SKILLS": return allPlayersConfirmed(sortBySkillsReducer(state));
 
         case "START_MATCH": return startMatchReducer(state);
+
+        case "BACK_ONE_STEP": return {
+            ...initial,
+            team1Name: state.team1Name,
+            team2Name: state.team2Name,
+            amountPlayers: state.amountPlayers,
+            team1Kit: state.team1Kit,
+            team2Kit: state.team2Kit,
+            team1Design: state.team1Design,
+            team2Design: state.team2Design,
+            team1Banner: state.team1Banner,
+            team2Banner: state.team2Banner,
+            info: true,
+        }
 
         default: return state;
     }

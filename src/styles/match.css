@@ -1,0 +1,103 @@
+.matchParent {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    margin-top: 8rem;
+    /* width: 80%; */
+    
+}
+
+.team1Parent {
+    display: flex;
+    /* align-content: center; */
+    /* justify-content: right; */
+    /* justify-content: center; */
+    /* flex-flow: row wrap; */
+    /* height: auto; */
+}
+
+.team2Parent {
+    display: flex;
+    /* align-content: center; */
+    /* justify-content: left; */
+    /* justify-content: center; */
+    /* flex-flow: row wrap; */
+    /* height: 80rem; */
+}
+
+.matchTeams {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+/* .matchTeams li {
+    justify-content: center;
+} */
+
+.matchTeams {
+    display: flex;
+    justify-content: center;
+}
+
+.matchTeams ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* .matchDesigns img {
+    justify-content: center;
+} */
+
+.matchTeams ul li {
+    /* display: flex;
+    flex-flow: column wrap; */
+    justify-content: center;
+}
+
+.matchTeams ul li matchDesigns, .matchTeams ul li .matchKits {
+    justify-content: center;
+}
+
+.matchParent .headerParent {
+    margin-bottom: 10rem;   
+}
+
+@media screen and (max-width: 890px) {
+    .matchParent .team1Crowd {
+        transform: rotate(0deg);
+        background-size: cover;
+        margin-bottom: 1rem;
+    }
+
+    .teamsOnPitch {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .matchParent .team2Crowd {
+        transform: rotate(0deg);
+        background-size: cover;
+    }
+
+    .matchParent {
+        display: flex;
+        flex-flow: column wrap;
+        margin-top: 1rem;
+    }
+
+    .team1Parent, .team2Parent {
+        margin-top: 1rem;
+    }
+
+    .match .matchResetButton {
+        margin-top: 1rem;
+    }
+
+    .headerParent h2 {
+        color: var(--darkViolet);
+        margin-bottom: 0;
+    }
+}
+

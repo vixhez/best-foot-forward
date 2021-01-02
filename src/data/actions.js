@@ -42,3 +42,9 @@ export const startMatch = () => {
         type: "START_MATCH",
     }
 }
+
+export const backOneStep = () => {
+    return {
+        type: "BACK_ONE_STEP",
+    }
+}

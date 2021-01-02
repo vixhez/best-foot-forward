@@ -50,6 +50,39 @@ p {
     text-align: center;
 }
 
-/* .landingPage main chosenStyle img {
+.playerForm .playerFormWarn {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 2.5rem;
+}
+
+/* .playerForm hr {
+    color: white;
+    width: 100%;
+} */
+
+.landingPage main .chosenStyle img {
+    color: var(--lightViolet);
+}
+
+.matchParent img {
     color: var(--grey);
+}
+
+.matchParent li {
+    color: var(--lightGreen);
+    text-align: center;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.matchParent .teamBanner {
+    font-family: 'Permanent Marker', sans serif;
+    font-size: 2rem;
+    color: var(--darkViolet);
+    text-align: center;
+}
+
+/* .playerForm aside .playerSettingsSeparate {
+    color: var(--darkGreen);
 } */

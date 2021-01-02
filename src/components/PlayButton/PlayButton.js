@@ -1,7 +1,7 @@
 const PlayButton = ({ startMatch }) => (
     <button
         onClick={ startMatch }
-        class="btn btn-danger">
+        class="btn startMatch">
         Start Match!
     </button>
 );

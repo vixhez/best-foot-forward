@@ -65,6 +65,7 @@ class PlayerForm extends Component {
                             Skill Level
                     </label>
                         <input
+                            className='skillSlider'
                             type="range"
                             min="0"
                             max="10"

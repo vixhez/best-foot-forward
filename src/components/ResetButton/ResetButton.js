@@ -2,7 +2,7 @@ const ResetButton = ({ playersReset }) => (
     <button
         onClick={ playersReset }
         className="btn resetButton">
-        Go Back
+        Restart
     </button>
 );
 
