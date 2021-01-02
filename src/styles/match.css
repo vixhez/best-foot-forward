@@ -4,7 +4,7 @@
     justify-content: center;
     align-content: center;
     margin-top: 8rem;
-    /* width: 70%; */
+    /* width: 80%; */
     
 }
 
@@ -61,6 +61,43 @@
 }
 
 .matchParent .headerParent {
-    margin-bottom: 10rem;
-    
+    margin-bottom: 10rem;   
 }
+
+@media screen and (max-width: 890px) {
+    .matchParent .team1Crowd {
+        transform: rotate(0deg);
+        background-size: cover;
+        margin-bottom: 1rem;
+    }
+
+    .teamsOnPitch {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .matchParent .team2Crowd {
+        transform: rotate(0deg);
+        background-size: cover;
+    }
+
+    .matchParent {
+        display: flex;
+        flex-flow: column wrap;
+        margin-top: 1rem;
+    }
+
+    .team1Parent, .team2Parent {
+        margin-top: 1rem;
+    }
+
+    .match .matchResetButton {
+        margin-top: 1rem;
+    }
+
+    .headerParent h2 {
+        color: var(--darkViolet);
+        margin-bottom: 0;
+    }
+}
+

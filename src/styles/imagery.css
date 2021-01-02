@@ -68,15 +68,15 @@
 .matchKits {
     display: flex;
     justify-content: center;
-    width: 80px;
-    height: auto;
+    width: 3.5rem;
+    height: 3.5rem;
 }
   
 .matchDesigns {
     display: flex;
     justify-content: center;
-    width: 100px;
-    height: 100px;
+    width: 4rem;
+    height: 4rem;
     border-radius: 100%;
     background-size: cover; 
 }
@@ -95,8 +95,7 @@
 .matchParent .team1CrowdImage img,
 .matchParent .team2Crowd,
 .matchParent .team2CrowdImage img {
-    width: 40rem;
-
+    width: 22rem;
 }
 
 .team1Parent, .team2Parent {
@@ -106,7 +105,7 @@ margin-top: 5rem;
 .matchParent .team1Crowd,
 .matchParent .team2Crowd {
     border-radius: 1%;
-    height: 22rem; 
+    height: 12rem; 
 }
 
 /* .pitch {
@@ -117,7 +116,7 @@ margin-top: 5rem;
 } */
 
 .matchParent li {
-    padding: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 
@@ -136,3 +135,4 @@ margin-top: 5rem;
     justify-self: center;
 
 }
+

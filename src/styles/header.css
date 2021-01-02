@@ -35,7 +35,6 @@ h3 {
 .headerParent h2 {
     color: var(--darkViolet);
     margin: 5rem 5rem 0 5rem;
-    margin-bottom: 0;
     text-align: center;
     border-top: 2px solid var(--lightGreen);
     border-bottom: 2px solid var(--lightGreen); 

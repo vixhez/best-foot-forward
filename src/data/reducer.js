@@ -63,9 +63,6 @@ const sortBySkillsReducer = (state) => {
 
     let alternatingLength = Math.ceil((state.playersArray.length / below6.length));
 
-    console.log(above6);
-    console.log(below6);
-
     for (let i = 0; i <= (below6.length - 1); i++) {
         let currentBelow6 = below6[i];
 
