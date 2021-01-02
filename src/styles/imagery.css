@@ -82,25 +82,45 @@
 
 .matchParent .team1Crowd {
     transform: rotate(280deg);
+    background-size: cover;
 }
 
 .matchParent .team2Crowd {
     transform: rotate(440deg);
+    background-size: cover;
 }
 
 .matchParent .team1Crowd,
-.matchParent .team1Crowd img,
+.matchParent .team1CrowdImage img,
 .matchParent .team2Crowd,
-.matchParent .team2Crowd img {
-    width: 35rem;
+.matchParent .team2CrowdImage img {
+    width: 40rem;
+
 }
 
+.team1Parent, .team2Parent {
+margin-top: 5rem;
+}
 
+.matchParent .team1Crowd,
+.matchParent .team2Crowd {
+    border-radius: 1%;
+    height: 22rem; 
+}
 
-.matchParent .team1Banner,
-.matchParent .team2Banner {
-    height: 6rem;
-    width: 100%;
-    background-size: cover;
-    color: var(--lightGreen);
+.pitch {
+    display: flex;
+    background-color: var(--darkGreen);
+    border-radius: 1%;
+    padding: 15rem 0 10rem 0;
+    margin: 0 10rem 4rem 10rem;
+
+}
+
+.matchParent li {
+    padding: 2rem;
+}
+
+.team1Match {
+    padding-right: 3rem;
 }

@@ -1,21 +1,46 @@
 .matchParent {
     display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.pitch {
+    display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    
 }
 
 .team1Parent {
     display: flex;
-    flex-flow: row wrap;
+    align-content: center;
+    justify-content: right;
+    /* justify-content: center; */
+    /* flex-flow: row wrap; */
     /* height: auto; */
 }
 
 .team2Parent {
     display: flex;
-    flex-flow: row wrap;
+    align-content: center;
+    justify-content: left;
+    /* justify-content: center; */
+    /* flex-flow: row wrap; */
     /* height: 80rem; */
+}
+
+.matchTeams {
+    display: flex;
+    /* justify-content: center; */
 }
 
 .matchParent ul {
     list-style-type: none;
     padding-left: 0;
+}
+
+.matchParent .headerParent {
+    margin-bottom: 10rem;
+    
 }
