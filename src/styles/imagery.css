@@ -82,13 +82,20 @@
 
 .matchParent .team1Crowd {
     transform: rotate(280deg);
-    width: 35rem;
 }
 
 .matchParent .team2Crowd {
     transform: rotate(440deg);
+}
+
+.matchParent .team1Crowd,
+.matchParent .team1Crowd img,
+.matchParent .team2Crowd,
+.matchParent .team2Crowd img {
     width: 35rem;
 }
+
+
 
 .matchParent .team1Banner,
 .matchParent .team2Banner {

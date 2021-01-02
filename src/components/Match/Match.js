@@ -8,27 +8,29 @@ import team2Crowd from '../../assets/team2Crowd.png';
 
 const Match = ({ team1Kit, team2Kit, team1Design, team2Design, team1Banner, team2Banner }) => (
     <div className='matchParent'>
-        <h1><Team1Header /> vs <Team2Header /></h1>
+        <div className='headerParent'>
+            <h1><Team1Header /> vs <Team2Header /></h1>
+        </div>
         <div className='team1Parent'>
-            <div className='team1Crowd'>
+            <div
+                className='team1Crowd'
+                style={{ backgroundImage: `url(${team1Design})` }}>
                 <img src={team1Crowd} alt='Cartoon crowd' />
-                <div
-                    className="team1Banner"
-                    style={{ backgroundImage: `url(${team1Design})` }}>
+                <p className='teamBanner'>
                     {team1Banner}
-                </div>
+                </p>
             </div>
             <MatchTeam1 />
         </div>
         <div className='team2Parent'>
             <MatchTeam2 />
-            <div className='team2Crowd'>
+            <div
+                className='team2Crowd'
+                style={{ backgroundImage: `url(${team2Design})` }}>
                 <img src={team2Crowd} alt='Cartoon crowd' />
-                <div
-                    className="team2Banner"
-                    style={{ backgroundImage: `url(${team2Design})` }}>
+                <p className='teamBanner'>
                     {team2Banner}
-                </div>
+                </p>
 
             </div>
         </div>

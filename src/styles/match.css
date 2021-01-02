@@ -3,6 +3,18 @@
     flex-flow: row wrap;
 }
 
+.team1Parent {
+    display: flex;
+    flex-flow: row wrap;
+    /* height: auto; */
+}
+
+.team2Parent {
+    display: flex;
+    flex-flow: row wrap;
+    /* height: 80rem; */
+}
+
 .matchParent ul {
     list-style-type: none;
     padding-left: 0;
