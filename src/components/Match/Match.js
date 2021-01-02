@@ -1,5 +1,3 @@
-import Team1Header from '../TeamHeader/Team1Header';
-import Team2Header from '../TeamHeader/Team2Header';
 import MatchTeam1 from '../MatchTeam/MatchTeam1';
 import MatchTeam2 from '../MatchTeam/MatchTeam2';
 
@@ -7,10 +5,11 @@ import team1Crowd from '../../assets/team1Crowd.png';
 import team2Crowd from '../../assets/team2Crowd.png';
 
 const Match = ({ team1Kit, team2Kit, team1Design, team2Design, team1Banner, team2Banner, team1Name, team2Name }) => (
+    <>
+    <div className='headerParent'>
+    <h2>{team1Name} <span>vs</span> {team2Name}</h2>
+</div>
     <div className='matchParent'>
-        <div className='headerParent'>
-            <h2>{team1Name} <span>vs</span> {team2Name}</h2>
-        </div>
         <div className='pitch'>
             <div className='team1Parent'>
                 <div
@@ -44,6 +43,7 @@ const Match = ({ team1Kit, team2Kit, team1Design, team2Design, team1Banner, team
             </div>
         </div>
     </div>
+    </>
 );
 
 export default Match;
