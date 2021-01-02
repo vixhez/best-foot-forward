@@ -58,15 +58,42 @@
     margin-top: auto;
     margin-bottom: auto;
 }
-  
+
+.matchTeams {
+    display: flex;
+    flex-flow: row wrap;
+}
+
 .matchKits {
+    display: flex;
+    justify-content: center;
     width: 80px;
     height: auto;
 }
   
 .matchDesigns {
+    display: flex;
+    justify-content: center;
     width: 100px;
     height: 100px;
     border-radius: 100%;
     background-size: cover; 
+}
+
+.matchParent .team1Crowd {
+    transform: rotate(280deg);
+    width: 35rem;
+}
+
+.matchParent .team2Crowd {
+    transform: rotate(440deg);
+    width: 35rem;
+}
+
+.matchParent .team1Banner,
+.matchParent .team2Banner {
+    height: 6rem;
+    width: 100%;
+    background-size: cover;
+    color: var(--lightGreen);
 }

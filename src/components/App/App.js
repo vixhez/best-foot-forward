@@ -79,6 +79,7 @@ const App = ({ info, teamsCreated, playersCreated }) => !info ? (
                     </div>
                     :
                     <div className='match'>
+                        <Header />
                         <Match />
                     </div>}
         </div>

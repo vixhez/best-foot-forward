@@ -5,6 +5,13 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: 'Permanent Marker', sans serif;
+    font-size: 4rem;
+    color: var(--lightGreen);
+    text-align: center;
+}
+
 h3 {
     font-family: 'Permanent Marker', sans serif;
     font-size: 3rem;

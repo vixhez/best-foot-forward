@@ -65,6 +65,15 @@ p {
     color: var(--lightViolet);
 }
 
+.matchParent img {
+    color: var(--grey);
+}
+
+.matchParent li {
+    color: var(--lightGreen);
+    text-align: center;
+}
+
 /* .playerForm aside .playerSettingsSeparate {
     color: var(--darkGreen);
 } */

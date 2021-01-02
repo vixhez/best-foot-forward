@@ -1,7 +1,7 @@
 const MatchTeam = ({ team, teamKit, teamDesign }) => (
     team.map((player, index) => {
         return (
-            <div>
+            <div className='matchTeams'>
                 <ul>
                     <li
                         class={index}
