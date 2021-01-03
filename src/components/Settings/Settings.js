@@ -56,31 +56,22 @@ class Settings extends Component {
 
     handleClickTeam1Kit(e) {
         e.preventDefault();
-        console.log(e.currentTarget);
-        this.setState({
-            team1Kit: e.currentTarget.firstElementChild.src,
-        });
+        this.setState({ team1Kit: e.currentTarget.firstElementChild.src });
     }
 
     handleClickTeam2Kit(e) {
         e.preventDefault();
-        this.setState({
-            team2Kit: e.currentTarget.firstElementChild.src,
-        });
+        this.setState({ team2Kit: e.currentTarget.firstElementChild.src });
     }
 
     handleClickTeam1Design(e) {
         e.preventDefault();
-        this.setState({
-            team1Design: e.currentTarget.firstElementChild.src,
-        });
+        this.setState({ team1Design: e.currentTarget.firstElementChild.src });
     }
 
     handleClickTeam2Design(e) {
         e.preventDefault();
-        this.setState({
-            team2Design: e.currentTarget.firstElementChild.src,
-        });
+        this.setState({ team2Design: e.currentTarget.firstElementChild.src });
     }
 
     handleChangeTeam1Banner(e) {
@@ -102,42 +93,38 @@ class Settings extends Component {
         return (
             <form
                 onSubmit={this.handleSubmit}>
-                
-                
-                    <div className='quantityParent'>
-                        <section className='playerQuantityInput'>
-                            <label htmlFor="players">How many on each team? (3-11)</label>
-                            <input
-                                type="number"
-                                id="players"
-                                name="players"
-                                min="3"
-                                max="11"
-                                onChange={this.handleChangePlayers}
-                                value={amountPlayers}
-                            />
-                        </section>
-                    </div>
 
-                    <div className='sectionsParent'>
-                        <section className='player1'>
+
+                <div className='quantityParent'>
+                    <section className='playerQuantityInput'>
+                        <label htmlFor="players">How many on each team? (3-11)</label>
+                        <input
+                            type="number"
+                            id="players"
+                            name="players"
+                            min="3"
+                            max="11"
+                            onChange={this.handleChangePlayers}
+                            value={amountPlayers} />
+                    </section>
+                </div>
+
+                <div className='sectionsParent'>
+                    <section className='player1'>
                         <div className='teamNameInput'>
                             <label
-                                htmlFor="team1"
-                                // className="form-label"
-                                >
-                                    Team 1 Name</label>
+                                htmlFor="team1">
+                                Team 1 Name
+                            </label>
                             <input
                                 type="text"
-                                // className="form-control"
                                 id="team1"
                                 onChange={this.handleChangeTeam1}
-                                value={team1Name}>
-                            </input>
+                                value={team1Name} />
 
                             <h3>{team1Name}</h3>
 
-                            <div className ='chosenStyleParent'>
+                            <div className='chosenStyleParent'>
                                 <div
                                     className='chosenStyle'
                                     style={{
@@ -224,18 +211,15 @@ class Settings extends Component {
 
                             <div className='teamBannerInput'>
                                 <label
-                                    htmlFor="team1Banner"
-                                    // className="form-label"
-                                    >
-                                        Team 1 Banner Message</label>
+                                    htmlFor="team1Banner">
+                                    Team 1 Banner Message
+                                </label>
                                 <input
                                     type="text"
                                     maxLength='35'
-                                    // className="form-control"
                                     id="team1Banner"
                                     onChange={this.handleChangeTeam1Banner}
-                                    value={team1Banner}>
-                                </input>
+                                    value={team1Banner} />
                             </div>
                         </div>
                     </section>
@@ -243,21 +227,18 @@ class Settings extends Component {
                     <section className='player2'>
                         <div className='teamNameInput'>
                             <label
-                                htmlFor="team2"
-                                // className="form-label"
-                                >
-                                    Team 2 Name</label>
+                                htmlFor="team2">
+                                Team 2 Name
+                            </label>
                             <input
                                 type="text"
-                                // className="form-control"
                                 id="team1"
                                 onChange={this.handleChangeTeam2}
-                                value={team2Name}>
-                            </input>
+                                value={team2Name} />
 
                             <h3>{team2Name}</h3>
 
-                            <div className ='chosenStyleParent'>
+                            <div className='chosenStyleParent'>
                                 <div
                                     className='chosenStyle'
                                     style={{
@@ -345,18 +326,15 @@ class Settings extends Component {
 
                             <div className='teamBannerInput'>
                                 <label
-                                    htmlFor="teamBanner"
-                                    // className="form-label"
-                                    >
-                                        Team 2 Banner Message</label>
+                                    htmlFor="teamBanner">
+                                    Team 2 Banner Message
+                                </label>
                                 <input
                                     type="text"
                                     maxLength='35'
-                                    // className="form-control"
                                     id="team2Banner"
                                     onChange={this.handleChangeTeam2Banner}
-                                    value={team2Banner}>
-                                </input>
+                                    value={team2Banner} />
                             </div>
                         </div>
                     </section>

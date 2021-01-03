@@ -1,7 +1,6 @@
 .playerConfirm {
     display: flex;
     flex-flow: column wrap;
-    /* justify-content: center; */
     background-color: var(--grey);
 }
 
@@ -11,20 +10,16 @@
     justify-content: center;
 }
 
-body {
-    background-color: var(--grey);
-}
-
-.playerConfirm .team1Parent .teamHeader, .playerConfirm .team2Parent .teamHeader {
+.playerConfirm .team1Parent .teamHeader,
+.playerConfirm .team2Parent .teamHeader {
     border-bottom: 2px solid var(--darkViolet);
     padding: 0.5rem;
     border-radius: 2%;
 }
 
-.playerConfirm .team1Parent, .playerConfirm .team2Parent {
-    /* display: flex; */
+.playerConfirm .team1Parent,
+.playerConfirm .team2Parent {
     flex-flow: column wrap;
-    /* justify-content: center; */
     border: 2px solid var(--darkGreen);
     min-width: 300px;
     max-width: 360px;
@@ -32,7 +27,8 @@ body {
     margin: 1rem;
 }
 
-.playerConfirm .team1Parent ul, .playerConfirm .team2Parent ul {
+.playerConfirm .team1Parent ul,
+.playerConfirm .team2Parent ul {
     display: flex;
     justify-content: center;
     list-style: none;

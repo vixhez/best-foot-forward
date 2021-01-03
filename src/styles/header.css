@@ -19,17 +19,12 @@ h3 {
     text-align: center;
 }
 
-.playerConfirm .team1Parent .teamHeader, .playerConfirm .team2Parent .teamHeader {
+.playerConfirm .team1Parent .teamHeader,
+.playerConfirm .team2Parent .teamHeader {
     font-family: 'Permanent Marker', sans serif;
     color: var(--lightViolet);
     text-align: center;
 }
-
-/* .matchParent .headerParent { */
-    /* display: flex;
-    justify-content: center; */
-    /* box-sizing: border-box;
-} */
 
 
 .headerParent h2 {
@@ -44,11 +39,3 @@ h3 {
     font-family: 'Permanent Marker', sans serif;
     color: var(--lightViolet);
 }
-
-/* 
-.landingPage main h3 {
-    font-size: 6vw;
-    max-width: 80%;
-    text-align: center;
-    clear: both;
-} */

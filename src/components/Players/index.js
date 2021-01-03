@@ -3,8 +3,8 @@ import Players from './Players';
 import { playerDetailsCompleted } from '../../data/actions';
 
 const mapStateToProps = ({ players, amountPlayers }) => ({
-        players,
-        amountPlayers,
+    players,
+    amountPlayers,
 
 });
 

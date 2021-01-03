@@ -1,6 +1,6 @@
 const ResetButton = ({ playersReset }) => (
     <button
-        onClick={ playersReset }
+        onClick={playersReset}
         className="btn resetButton">
         Restart
     </button>

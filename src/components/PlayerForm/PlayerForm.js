@@ -50,15 +50,14 @@ class PlayerForm extends Component {
                     onSubmit={this.handleSubmit}>
                     <div className='playerFormParent'>
                         <label
-                            htmlFor="playerName"
-                            >Player Name</label>
+                            htmlFor="playerName">
+                            Player Name
+                        </label>
                         <input
                             type="text"
                             id={this.props.id}
                             onChange={this.handleChangePlayerName}
-                            value={players.playerName}
-                        >
-                        </input>
+                            value={players.playerName} />
 
                         <label
                             htmlFor="playerSkills">
@@ -71,8 +70,7 @@ class PlayerForm extends Component {
                             max="10"
                             value={+players.playerSkills}
                             id={this.props.id}
-                            onChange={this.handleChangePlayerSkills}>
-                        </input>
+                            onChange={this.handleChangePlayerSkills} />
 
                         <button
                             type="submit"

@@ -42,14 +42,16 @@
     text-align: center;
 }
 
-.landingPage input, .landingPage input:focus {
+.landingPage input,
+.landingPage input:focus {
     background-color: var(--darkViolet);
     border: 1px solid var(--grey);
     border-radius: 2%;
     width: 100%;
 }
 
-.landingPage .teamNameInput, .landingPage .teamBannerInput {
+.landingPage .teamNameInput,
+.landingPage .teamBannerInput {
     margin-top: 1rem;
     margin-bottom: 1rem;
 }

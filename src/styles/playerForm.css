@@ -4,10 +4,6 @@
     justify-content: center;
 }
 
-/* .playerForm form {
-    justify-content: center;
-} */
-
 .playerForm main form {
     display: flex;
     justify-content: center;
@@ -35,7 +31,8 @@
     padding-left: 0;
 }
 
-.playerFormParent input, .playerFormParent input:focus {
+.playerFormParent input,
+.playerFormParent input:focus {
     background-color: var(--darkViolet);
     border: 1px solid var(--grey);
     border-radius: 2%;
@@ -49,7 +46,8 @@
     max-width: 600px;
 }
 
-.playerFormParent .skillSlider, .playerFormParent .skillSlider:focus {
+.playerFormParent .skillSlider,
+.playerFormParent .skillSlider:focus {
     background-color: var(--lightViolet);
     height: 5px;
     border-radius: 2%;
@@ -65,11 +63,10 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50%;
    }
    
-   input[type="range"]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
     height: 15px;
     width: 15px;
     background: var(--darkGreen);
     border: none;
     border-radius: 50%;
-   }
-   
+}

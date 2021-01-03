@@ -3,9 +3,9 @@ import PlayerForm from './PlayerForm';
 import { playerAdded } from '../../data/actions';
 
 const mapStateToProps = ({ players, playersArray, playerComplete }) => ({
-        players,
-        playersArray,
-        playerComplete
+    players,
+    playersArray,
+    playerComplete
 });
 
 const mapDispatchToProps = dispatch => {

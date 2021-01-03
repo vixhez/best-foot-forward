@@ -8,13 +8,11 @@ const MatchTeam = ({ team, teamKit, teamDesign }) => (
                         key={index}>
                         <div
                             className="matchDesigns"
-                            style={{ backgroundImage: `url(${teamDesign})` }}
-                            >
+                            style={{ backgroundImage: `url(${teamDesign})` }}>
                             <img
                                 className="matchKits"
                                 src={`${teamKit}`} alt="Players with chosen kit" />
                         </div>
-
                         {team[index]}
                     </li>
                 </ul>
