@@ -43,7 +43,7 @@ Once the MVP had been fulfilled, I began with my variety of stretch goals, which
 
 ![Landing page screenshot](https://github.com/vixhez/best-foot-forward/blob/main/src/assets/landingPageScreenshot.png)
 
-The landing page consists of the team settings, as well as sidebar giving background on the app and some guidance for use. I utilised media queries to ensure that the sidebar text becomes smaller and is no longer fixed at a certain screen size to ensure accessibility across devices.
+The landing page consists of the team settings, as well as sidebar giving background on the app and some guidance for use. I utilised media queries to ensure that at a certain screen size, the sidebar text becomes smaller and the parent container is no longer fixed, to ensure accessibility across devices.
 
 Behind the scenes, the team settings are a form within a class-based component. The choices the user makes - player quantity, team names, team kits and banner messages - are initially stored in local state, and then dispatched to global state once 'Save Settings' is pressed. The pressing of 'Save Settings' also changes the state of 'info' from false to true, which conditionally renders the next section of the app.
 
@@ -56,9 +56,9 @@ This section of the app contains the number of player fields that the user reque
 
 Each field within the player form is a copy of the same class-based component, and upon clicking 'Confirm Player', each 'mini' form sends an action to the reducer to add that instance of name and skill to the array of objects stored in the global state, soon to contain the complete player list.
 
-I implemented an additional feature of not allowing the user to go any further before all players had been confirmed and therefore added to state. I did this by utilising function composition in the reducer to check that the length of the array of objects containing the players is the same as the 'amountPlayers' piece of state.
+I implemented an additional feature of not allowing the user to go any further toward the match before all players had been confirmed and therefore added to state. I did this by utilising function composition in the reducer to check that the length of the array of objects containing the players is the same number as the 'amountPlayers' piece of state.
 
-The user then has the choice to create teams randomly, or by skill for fairer balancing. For both sets of logic, both located in the reducer, I made sure to create a new array to 'extract' the relevant information from the object, and then made use of a variety of techniques, such as mapping, splicing, and for loops. The results of this logic was then implemented into state.
+The user then has the choice to create teams randomly, or by skills for fairer balancing. For these sets of logic, both located in the reducer, I made sure to create a new array to 'extract' the relevant information from the object, and then made use of a variety of techniques, such as mapping, splicing, and for loops. The results of the logic in both cases were then implemented into state.
 
 Both the random and skill choice buttons also set 'teamsCreated' from false to true, in order to enable conditional rendering of the next section.
 
@@ -74,23 +74,23 @@ There are 3 actions the user can take here - the 'Start Match' button conditiona
 
 ![Match screenshot](https://github.com/vixhez/best-foot-forward/blob/main/src/assets/matchScreenshot.png)
 
-I decided to have some fun with the match section by implementing images of crowds with the team banner message that the user entered as part of the team settings. I thought this would create more of a match atmosphere. The background of this component also contains the chosen team design. The 'pitch' features the player names in their teams, as well as their chosen kit and design. State was utilised to create this fluid feel of the user's choices affecting later rendering within the app.
+I decided to have some fun with the match section by implementing images of crowds with the team banner message that the user entered as part of the team settings. I thought this would create more of a match atmosphere. The background of this crowd/banner component also contains the chosen team design. The 'pitch' features the player names in their teams, as well as their chosen kit and design. State was utilised to create this fluid feel, in which the user's choices can customise later rendering within the app.
 
-I implemented several media queries on the match section, which create a vertical column configuration at a certain screen size. This re-designs the page, with the crowd and banner components becoming horizontal to ensure mobile use of the app would be just as enjoyable.
+I implemented several media queries on the match section, which re-design the page at a certain screen size. The crowds and 'pitch' then stack on top of each other in a column to ensure enjoyable mobile use of the app.
 
 At the bottom of the match section is the same 'Restart' button as in previous areas of the app, and returns initial state, excluding the original team settings which are retained to provide a smooth user journey.
 
 
 ## Improvements
 
-I thoroughly enjoyed building this app, and feel the experience was quite formative as it was my first full-scale app built completely individually.
+I thoroughly enjoyed building this app, and feel the experience was formative as it was my first full-scale app built completely individually.
 
-However, of course, there is room for improvement. I will consider the following areas more closely when building my next app:
+However, of course, there is room for improvement. Upon reflection, I will consider the following areas more closely when building my next app:
 
-- Implementation of a back end using Laravel to provide some long-term memory for the app, and to work toward an even smoother user experience. In the context of Best Foot Forward, a back end would have provided feature such as remembering previously generated teams
-- Being more closely guided by the user journey when building components. More specifically in this case - being able to remember player names when going back a step from the team preview section, which was made difficult by the fact I utilised multiple class-based components and local state for this functionality
+- Implementation of a back end using Laravel to provide some long-term memory for the app, and to work toward an even smoother user experience. In the context of Best Foot Forward, a back end would have provided features such as remembering previously generated teams
+- Being more closely guided by the user journey when building components. More specifically in this case - being able to remember player names when going back a step from the team preview section, which was made difficult by the fact that I utilised multiple class-based components and local state for this functionality
 - More specific naming of components and classes. Within Best Foot Forward, there were times I felt a little lost within football-based jargon. Perhaps partly inevitable when building a themed app, but I feel I will use this confusion as a learning curve for more precise naming
-- More time allotted for testing the app, and imagining all eventualities that could arise from its use
+- More time allotted for testing the app, and imagining all eventualities that could arise from its use in order to make it more reliable
 
 
 ## Getting Started with Create React App
