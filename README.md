@@ -18,6 +18,45 @@ In the terminal...
 
 5. Head to (http://localhost:3000/) to view the app
 
+## Process and Decisions
+
+### Process
+
+The MVP set by Develop Me was to create a tool that could randomly pick 5-a-side football teams from a list of 10 names. Sticking with Agile methodology, I ensured that this was up and running in the early days of the project.
+
+I continuously utilised GitHub issues as a to-do list in order to keep myself thinking in small increments and to maintain clear project direction. I also hand sketched a wireframe to enable visual direction when building the core logic, in the hope that this would help the project to play out fluidly.
+
+Once the MVP had been fulfilled, I began with my variety of stretch goals, which included logic for skills balancing of teams, visual aspects such as a team kit and pattern picker, and the creation of a support banner during the match using the user's input.
+
+### Decisions
+
+- Utilising ternary statements and conditional rendering to navigate through the app, as opposed to viable alternatives such as routing
+- React for components and Redux for state management
+- Atomic commits with Git, assisted by GitHub issues to keep progress increments small and specific
+- DaFont, FontAwesome and coolors.co to deliver inspiration for styling decisions
+
+## User Journey
+
+![Landing page screenshot](https://github.com/vixhez/best-foot-forward/blob/main/src/assets/landingPageScreenshot.png "Landing page screenshot")
+
+
+![Player form screenshot](https://github.com/vixhez/best-foot-forward/blob/main/src/assets/playerFormScreenshot.pngg "Player form screenshot")
+
+
+![Team confirm screenshot](https://github.com/vixhez/best-foot-forward/blob/main/src/assets/teamConfirmScreenshot.png "Team confirm screenshot")
+
+
+![Match screenshot](https://github.com/vixhez/best-foot-forward/blob/main/src/assets/matchScreenshot.png "Match screenshot")
+
+
+
+
+
+
+
+
+
+
 
 
 
