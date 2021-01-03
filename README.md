@@ -85,7 +85,7 @@ At the bottom of the match section is the same 'Restart' button as in previous a
 
 I thoroughly enjoyed building this app, and feel the experience was quite formative as it was my first full-scale app built completely individually.
 
-However, of course, there is room for improvement. I feel the following areas are things I will consider more closely when building my next app:
+However, of course, there is room for improvement. I will consider the following areas more closely when building my next app:
 
 - Implementation of a back end using Laravel to provide some long-term memory for the app, and to work toward an even smoother user experience. In the context of Best Foot Forward, a back end would have provided feature such as remembering previously generated teams
 - Being more closely guided by the user journey when building components. More specifically in this case - being able to remember player names when going back a step from the team preview section, which was made difficult by the fact I utilised multiple class-based components and local state for this functionality
