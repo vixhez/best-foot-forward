@@ -83,6 +83,10 @@ p {
     text-align: center;
 }
 
+.sidebarSettingsAndAbout {
+    position: fixed;
+}
+
 /* .playerForm aside .playerSettingsSeparate {
     color: var(--darkGreen);
 } */

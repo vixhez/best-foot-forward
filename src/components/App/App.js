@@ -1,7 +1,7 @@
 import Header from '../Header/Header';
 
 import Settings from '../Settings';
-import SettingsInstructions from '../SettingsInstructions/SettingsInstructions';
+import SettingsInstructionsAndAbout from '../SettingsInstructionsAndAbout/SettingsInstructionsAndAbout';
 
 import Players from '../Players';
 import PlayerList from '../PlayerList';
@@ -28,7 +28,7 @@ const App = ({ info, teamsCreated, playersCreated }) => !info ? (
         </main>
 
         <aside>
-            <SettingsInstructions />
+            <SettingsInstructionsAndAbout />
         </aside>
     </div>
 ) : (
