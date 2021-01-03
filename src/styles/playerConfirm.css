@@ -4,6 +4,10 @@
     background-color: var(--grey);
 }
 
+body {
+    background-color: var(--grey);
+}
+
 .playerConfirm .teamsParent {
     display: flex;
     flex-flow: row wrap;
