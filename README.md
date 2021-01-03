@@ -36,7 +36,7 @@ Once the MVP had been fulfilled, I began with my variety of stretch goals, which
 - React for components and Redux for state management
 - Atomic commits with Git, assisted by GitHub issues to keep progress increments small and specific
 - The use of media queries to ensure a smooth user experience across devices
-- DaFont, FontAwesome and coolors.co to deliver inspiration for styling decisions
+- DaFont, FontAwesome and coolors.co to deliver inspiration for styling decisions, which would be contrasting to increase accessibility
 
 
 ## User Journey
