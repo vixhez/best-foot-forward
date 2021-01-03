@@ -11,7 +11,7 @@ const Match = ({ team1Kit, team2Kit, team1Design, team2Design, team1Banner, team
         </div>
         <div className='matchParent'>
             {/* <div className='pitch'> */}
-            <div className='team1Parent'>
+            <div className='matchTeam1Parent'>
                 <div
                     className='team1Crowd'
                     style={{ backgroundImage: `url(${team1Design})` }}>
@@ -30,7 +30,7 @@ const Match = ({ team1Kit, team2Kit, team1Design, team2Design, team1Banner, team
                     <MatchTeam2 />
                 </div>
             </div>
-            <div className='team2Parent'>
+            <div className='matchTeam2Parent'>
 
                 <div
                     className='team2Crowd'
