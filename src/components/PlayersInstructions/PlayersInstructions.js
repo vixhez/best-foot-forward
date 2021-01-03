@@ -6,10 +6,11 @@ const PlayersInstructions = () => (
             </h6>
             <p>
                 Great designing!
-                Now it's time to tell the app your player's names and skill levels.
-                The number of player fields on your left is based on how many people you told us would be on each team.
+                Now it's time to add the player's names and skill levels.
+                The number of player fields provided is based on how many people you previously decided would be on each team.
                 Fill out each field and then press 'Confirm Player'.
-                You then have the choice to sort your teams randomly or, for fairer teams, based on their skills levels. If it's all gone horribly wrong, just press restart!
+                You then have the choice to sort your teams randomly, or for fairer teams, based on skill levels.
+                If it's all gone horribly wrong, just press restart!
             </p>
         </div>
 
