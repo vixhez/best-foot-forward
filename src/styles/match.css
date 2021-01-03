@@ -8,7 +8,7 @@
     
 }
 
-.team1Parent {
+.matchTeam1Parent {
     display: flex;
     /* align-content: center; */
     /* justify-content: right; */
@@ -17,7 +17,7 @@
     /* height: auto; */
 }
 
-.team2Parent {
+.matchTeam2Parent {
     display: flex;
     /* align-content: center; */
     /* justify-content: left; */
@@ -87,7 +87,7 @@
         margin-top: 1rem;
     }
 
-    .team1Parent, .team2Parent {
+    .matchTeam1Parent, .matchTeam2Parent {
         margin-top: 1rem;
     }
 

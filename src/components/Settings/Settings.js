@@ -230,6 +230,7 @@ class Settings extends Component {
                                         Team 1 Banner Message</label>
                                 <input
                                     type="text"
+                                    maxLength='35'
                                     // className="form-control"
                                     id="team1Banner"
                                     onChange={this.handleChangeTeam1Banner}
@@ -350,6 +351,7 @@ class Settings extends Component {
                                         Team 2 Banner Message</label>
                                 <input
                                     type="text"
+                                    maxLength='35'
                                     // className="form-control"
                                     id="team2Banner"
                                     onChange={this.handleChangeTeam2Banner}

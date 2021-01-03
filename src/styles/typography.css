@@ -16,8 +16,16 @@ p {
     color: var(--grey);
 }
 
-.landingPage main label, .landingPage aside p, .playerForm main label {
+.landingPage main label,
+.landingPage aside p,
+.landingPage aside a,
+.playerForm main label {
     color: var(--lightGreen);
+}
+
+.landingPage aside a {
+    color: var(--darkGreen);
+    font-weight: bold;
 }
 
 .landingPage input, .landingPage input:focus, .playerForm input, .playerForm input:focus {
@@ -46,7 +54,7 @@ p {
     color: var(--lightGreen);
 }
 
-.playerForm p {
+.playerForm main p {
     text-align: center;
 }
 
@@ -66,7 +74,7 @@ p {
 }
 
 .matchParent img {
-    color: var(--grey);
+    color: var(--darkGreen);
 }
 
 .matchParent li {
@@ -81,12 +89,61 @@ p {
     font-size: 2rem;
     color: var(--darkViolet);
     text-align: center;
+    line-height: 1;
+}
+
+.sidebarSettingsAndAbout,
+.sidebarPlayersInstructions {
+    padding: 0.5rem;
+    text-align: right;
 }
 
 .sidebarSettingsAndAbout {
     position: fixed;
 }
 
+.sidebarSettingsAndAbout p,
+.sidebarPlayersInstructions p {
+    font-size: 0.9rem;
+}
+
+.sidebarSettingsAndAbout h6,
+.sidebarPlayersInstructions h6 {
+    color: var(--lightViolet);
+    font-size: 1.6rem;
+}
+
+/* .sidebarSettingsAndAbout .sidebarAbout {
+    position: fixed;
+    bottom: 0;
+    padding-right: 0.5rem;
+} */
+
+.sidebarSettingsAndAbout .sidebarAbout p,
+.sidebarSettingsAndAbout .sidebarWelcome p,
+.sidebarPlayersInstructions .sidebarAbout p {
+    font-size: 0.8rem;
+}
+
 /* .playerForm aside .playerSettingsSeparate {
     color: var(--darkGreen);
 } */
+
+@media screen and (max-width: 1265px), screen and (max-height: 468px) {
+    .sidebarSettingsAndAbout p,
+    .sidebarPlayersInstructions p {
+        font-size: 0.8rem;
+    }
+    .sidebarSettingsAndAbout .sidebarAbout p,
+    .sidebarSettingsAndAbout .sidebarWelcome p,
+    .sidebarPlayersInstructions .sidebarAbout p {
+        font-size: 0.7rem;
+}
+    .sidebarSettingsAndAbout h6,
+    .sidebarPlayersInstructions h6 {
+        font-size: 1.3rem;
+    }
+    .sidebarSettingsAndAbout {
+        position: initial;
+    }
+}

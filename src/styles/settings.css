@@ -23,7 +23,7 @@
     width: 25%;
     background-color: var(--darkViolet);
     border-left: 2px solid var(--lightGreen);
-    padding: 5px;
+    padding: 0.1rem;
 }
 
 .landingPage main form .player1,

@@ -50,7 +50,6 @@ const App = ({ info, teamsCreated, playersCreated }) => !info ? (
 
                     <aside>
                         <PlayerList />
-                        {/* <hr className='playerListHr' /> */}
                         <PlayersInstructions />
                     </aside>
                 </div>
@@ -68,9 +67,10 @@ const App = ({ info, teamsCreated, playersCreated }) => !info ? (
                                 <Team2 />
                             </div>
                         </div>
-                        <div className='buttons'>      <div className='playButtonParent'>
-                            <PlayButton />
-                        </div>
+                        <div className='buttons'>
+                            <div className='playButtonParent'>
+                                <PlayButton />
+                            </div>
                             <div className='backResetButtonParent'>
                                 <BackOneButton />
                                 <ResetButton />

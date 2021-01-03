@@ -1,10 +1,29 @@
 const PlayersInstructions = () => (
-    <>
-        <p className='playerSettingsSeparate'>_____</p>
-        <p>
-            Mew mew rub against owner because nose is wet freak human out make funny noise mow mow mow mow mow mow success now attack human yet pet my belly, you know you want to; seize the hand and shred it! 𝕄𝔼𝕆𝕎 or meow and walk away. Chase dog then run away refuse to leave cardboard box but has closed eyes but still sees you, rub against owner because nose is wet yet pee in human's bed until he cleans the litter box. Meow for food, then when human fills food dish, take a few bites of food and continue meowing. Meow sleep over your phone and make cute snoring noises hiiiiiiiiii feed me now, but commence midnight zoomies and eat too much then proceed to regurgitate all over living room carpet while humans eat dinner mark territory run outside as soon as door open. I like big cats and i can not lie lie on your belly and purr when you are asleep. Cats secretly make all the worlds muffins meowing non stop for food. Mew mew drink water out of the faucet favor packaging
-        </p>
-    </>
+    <div className='sidebarPlayersInstructions'>
+        <div className='sidebarSettings'>
+            <h6>
+                Guidance
+            </h6>
+            <p>
+                Great designing!
+                Now it's time to tell the app your player's names and skill levels.
+                The number of player fields on your left is based on how many people you told us would be on each team.
+                Fill out each field and then press 'Confirm Player'.
+                You then have the choice to sort your teams randomly or, for fairer teams, based on their skills levels. If it's all gone horribly wrong, just press restart!
+            </p>
+        </div>
+
+        <div className='sidebarAbout'>
+        <h6>
+                About
+            </h6>
+            <p>
+                This app is the fruit of an assigned technical challenge as part of Develop Me's Coding Fellowship Bootcamp. You are very welcome to check out the code <a href='https://github.com/vixhez/best-foot-forward' target='_blank'
+                rel='noreferrer'>here</a>.
+
+            </p>
+        </div>
+    </div>
 );
 
 export default PlayersInstructions;
