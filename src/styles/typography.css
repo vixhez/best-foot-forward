@@ -23,16 +23,21 @@ p {
     color: var(--lightGreen);
 }
 
-.landingPage aside a {
+.landingPage aside a,
+.playerForm aside a {
     color: var(--darkGreen);
     font-weight: bold;
 }
 
-.landingPage input, .landingPage input:focus, .playerForm input, .playerForm input:focus {
+.landingPage input,
+.landingPage input:focus,
+.playerForm input,
+.playerForm input:focus {
     color: var(--lightViolet);
 }
 
-.landingPage input:active, .playerForm input:active {
+.landingPage input:active,
+.playerForm input:active {
     color: var(--lightViolet);
 }
 
@@ -41,7 +46,8 @@ p {
     color: var(--darkViolet);
 }
 
-.playerForm main p, .playerForm aside p {
+.playerForm main p,
+.playerForm aside p {
     color: var(--lightGreen);
 }
 
@@ -50,7 +56,8 @@ p {
     text-align: center;
 }
 
-.playerForm main p, .playerForm aside p {
+.playerForm main p,
+.playerForm aside p {
     color: var(--lightGreen);
 }
 
@@ -63,11 +70,6 @@ p {
     font-style: italic;
     margin-top: 2.5rem;
 }
-
-/* .playerForm hr {
-    color: white;
-    width: 100%;
-} */
 
 .landingPage main .chosenStyle img {
     color: var(--lightViolet);
@@ -113,21 +115,11 @@ p {
     font-size: 1.6rem;
 }
 
-/* .sidebarSettingsAndAbout .sidebarAbout {
-    position: fixed;
-    bottom: 0;
-    padding-right: 0.5rem;
-} */
-
 .sidebarSettingsAndAbout .sidebarAbout p,
 .sidebarSettingsAndAbout .sidebarWelcome p,
 .sidebarPlayersInstructions .sidebarAbout p {
     font-size: 0.8rem;
 }
-
-/* .playerForm aside .playerSettingsSeparate {
-    color: var(--darkGreen);
-} */
 
 @media screen and (max-width: 1265px), screen and (max-height: 468px) {
     .sidebarSettingsAndAbout p,
@@ -138,7 +130,7 @@ p {
     .sidebarSettingsAndAbout .sidebarWelcome p,
     .sidebarPlayersInstructions .sidebarAbout p {
         font-size: 0.7rem;
-}
+    }
     .sidebarSettingsAndAbout h6,
     .sidebarPlayersInstructions h6 {
         font-size: 1.3rem;

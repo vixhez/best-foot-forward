@@ -1,6 +1,6 @@
 const RandomSortButton = ({ sortRandomly }) => (
     <button
-        onClick={ sortRandomly }
+        onClick={sortRandomly}
         class="btn randomButton">
         Sort Players Randomly
     </button>

@@ -18,17 +18,17 @@ const SettingsInstructionsAndAbout = () => (
                 You can then proceed to innovating your very own team name.
                 Then, step into the sports boutique to try on different combinations of team kits and designs. Do this by clicking the clothing and pattern icons to mix and match.
                 Next, think up a banner message to be held by the team's supporters during the match.
-                Do the same for the second team and then click 'Save Settings'. 
+                Do the same for the second team and then click 'Save Settings'.
             </p>
         </div>
 
         <div className='sidebarAbout'>
-        <h6>
+            <h6>
                 About
             </h6>
             <p>
-                This app is the fruit of an assigned technical challenge as part of Develop Me's Coding Fellowship Bootcamp. You are very welcome to check out the code <a href='https://github.com/vixhez/best-foot-forward' target='_blank'
-                rel='noreferrer'>here</a>.
+                This app is the fruit of an assigned technical challenge as part of Develop Me's Coding Fellowship Bootcamp. You are very welcome to check out the code
+                <a href='https://github.com/vixhez/best-foot-forward' target='_blank' rel='noreferrer'> here</a>.
 
             </p>
         </div>

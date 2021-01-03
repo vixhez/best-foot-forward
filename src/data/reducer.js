@@ -14,11 +14,6 @@ const settingsReducer = (state, action) => ({
     team2Banner: action.data.team2Banner
 });
 
-// const playerDetailsReducer = (state, action) => ({
-//     ...state,
-//     playerNames: action.data.playerNames,
-// });
-
 const playerAddedReducer = (state, action) => ({
     ...state,
     players: {
@@ -28,11 +23,11 @@ const playerAddedReducer = (state, action) => ({
     playersArray: (state.playersArray.concat(action.data.players)),
 });
 
-const sortRandomReducer = (state) => {   
+const sortRandomReducer = (state) => {
     const teamSplit = (state.playersArray.length) / 2;
     const justNames = [];
 
-    state.playersArray.sort(function(a, b) {
+    state.playersArray.sort(function (a, b) {
         return 0.5 - Math.random();
     });
 
@@ -101,8 +96,6 @@ const startMatchReducer = (state) => ({
 const reducer = (state, action) => {
     switch (action.type) {
         case "SETTINGS_COMPLETED": return settingsReducer(state, action);
-        
-        // case "PLAYER_DETAILS_COMPLETED": return playerDetailsReducer(state, action);
 
         case "PLAYERS_RESET": return {
             ...initial,
@@ -141,7 +134,6 @@ const reducer = (state, action) => {
 
         default: return state;
     }
-  
-  };
-  
-  export default reducer;
+};
+
+export default reducer;

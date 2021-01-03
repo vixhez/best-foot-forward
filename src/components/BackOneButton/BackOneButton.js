@@ -1,6 +1,6 @@
 const BackOneButton = ({ backOneStep }) => (
     <button
-        onClick={ backOneStep }
+        onClick={backOneStep}
         className="btn backOneButton">
         Back
     </button>

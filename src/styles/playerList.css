@@ -1,7 +1,6 @@
 .playerForm aside .playerListParent {
     display: flex;
     flex-flow: row wrap;
-    
 }
 
 .playerForm aside .playerListParent .playerListUl {
